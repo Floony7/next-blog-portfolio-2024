@@ -3,11 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --font-fallback: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif;
+  --font-body: "IBM Plex Sans", var(--font-fallback);
+  --font-mono: "IBM Plex Mono", Consolas, "Andale Mono WT", "Andale Mono",
+    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
+    "Courier New", Courier, monospace;
+  --clr-blue: hsl(200, 100%, 50%);
+  --clr-blue-hsl: 200, 100%, 50%;
+  --clr-blue-light: hsl(200, 100%, 75%);
+  --clr-blue-dark: hsl(200, 100%, 30%);
+  --clr-green: hsl(158, 78%, 42%);
+  --clr-green-dark: hsl(158, 78%, 22%);
+  --clr-orange: hsl(21, 100%, 60%);
+  --clr-orange-dark: hsl(21, 100%, 40%);
+  --clr-purple-hover: hsl(269, 79%, 84%);
+  --clr-purple: hsl(269, 79%, 74%);
+  --clr-purple-dark-hover: hsl(269, 79%, 54%);
+  --clr-purple-dark: hsl(269, 79%, 44%);
+  --clr-red: hsl(350, 100%, 54%);
+  --clr-red-dark: hsl(350, 100%, 44%);
+  --clr-yellow: hsl(41, 100%, 58%);
+  --clr-yellow-dark: hsl(41, 100%, 38%);
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -30,4 +51,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */

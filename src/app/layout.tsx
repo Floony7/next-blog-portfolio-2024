@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import { ProfilePic } from "@/components/profile-pic";
 
-const inter = Inter({ subsets: ["latin"] });
+const plex = IBM_Plex_Sans({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,12 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`min-h-screen bg-gradient-to-r from-cyan-500 to-sky-700 ${inter.className}`}
+        className={`min-h-screen bg-slate-900 text-white ${plex.className}`}
       >
         <Navbar />
-        <div className="md:w-8/12 mx-auto border border-cyan-50 p-5">
-          {children}
-        </div>
+        <ProfilePic />
+        {children}
       </body>
     </html>
   );

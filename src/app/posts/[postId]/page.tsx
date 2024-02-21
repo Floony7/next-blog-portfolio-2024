@@ -1,0 +1,54 @@
+import Link from "next/link";
+import getFormattedDate from "@/lib/format-date";
+import { getSortedPostsData, getPostData } from "@/lib/posts";
+import { notFound } from "next/navigation";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { postId: string };
+}) {
+  const posts = getSortedPostsData();
+  const { postId } = params;
+
+  const post = posts.find((p) => p.id === postId);
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+    };
+  }
+
+  return {
+    title: post.title,
+  };
+}
+
+export default async function Post({ params }: { params: { postId: string } }) {
+  const posts = getSortedPostsData();
+  const { postId } = params;
+
+  if (!posts.find((post) => post.id === postId)) notFound();
+
+  const { title, date, contentHtml } = await getPostData(postId);
+
+  const published = getFormattedDate(date);
+
+  return (
+    <main className="px-6 prose prose-xl prose-strong:text-gray-200 mx-auto">
+      <h1 className="text-3xl text-white mt-4 mb-0">{title}</h1>
+      <p className="uppercase text-sm text-teal-500">{published}</p>
+      <article className="text-gray-200 text-base">
+        <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <p>
+          <Link
+            className="uppercase text-sm text-teal-500 underline-offset-4 hover:opacity-75"
+            href="/"
+          >
+            ← Back to home
+          </Link>
+        </p>
+      </article>
+    </main>
+  );
+}
