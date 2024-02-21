@@ -6,7 +6,7 @@ export const ProfilePic = () => {
   return (
     <section className="w-full mx-auto">
       <Image
-        className="border-4 border-teal-500 drop-shadow-xl shadow-black rounded-full mx-auto mt-8"
+        className="border-8 border-teal-500 drop-shadow-xl shadow-black rounded-full mx-auto mt-8"
         src="/images/fred.png"
         alt="Fred Lunjevich"
         width={200}
