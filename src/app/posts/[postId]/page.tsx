@@ -3,14 +3,19 @@ import getFormattedDate from "@/lib/format-date";
 import { getSortedPostsData, getPostData } from "@/lib/posts";
 import { notFound } from "next/navigation";
 
+export function generateStaticParams() {
+  const posts = getSortedPostsData();
+
+  return posts.map((post) => ({ postId: post.id }));
+}
+
 export async function generateMetadata({
   params,
 }: {
   params: { postId: string };
 }) {
-  const posts = getSortedPostsData();
   const { postId } = params;
-
+  const posts = getSortedPostsData();
   const post = posts.find((p) => p.id === postId);
 
   if (!post) {
