@@ -46,10 +46,7 @@ export default async function Post({ params }: { params: { postId: string } }) {
       <article className="text-gray-200 text-base">
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
         <p>
-          <Link
-            className="uppercase text-sm text-teal-500 underline-offset-4 hover:opacity-75"
-            href="/"
-          >
+          <Link className="fancy-anchor" href="/">
             ← Back to home
           </Link>
         </p>

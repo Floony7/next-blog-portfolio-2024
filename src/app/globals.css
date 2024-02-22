@@ -28,6 +28,25 @@
   --clr-yellow-dark: hsl(41, 100%, 38%);
 }
 
+.fancy-anchor {
+  @apply uppercase text-sm text-teal-500 underline-offset-4 hover:opacity-75;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+.profile-shape {
+  border-radius: 58% 42% 41% 59% / 51% 78% 22% 49%;
+  transition: border-radius 0.4s ease-in-out;
+}
+
+.profile-shape:hover {
+  border-radius: 90% 10% 79% 21% / 29% 78% 22% 71%;
+}
+
 /*
 @media (prefers-color-scheme: dark) {
   :root {
