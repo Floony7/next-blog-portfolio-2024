@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import { ProfilePic } from "@/components/profile-pic";
 import { Hero } from "@/components/hero";
+import Footer from "@/components/footer";
 
 const plex = IBM_Plex_Sans({ weight: "400", subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main>{children}</main>
+        {/* <Footer /> */}
       </body>
     </html>
   );
