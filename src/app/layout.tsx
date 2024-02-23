@@ -23,8 +23,7 @@ export default function RootLayout({
         className={`min-h-screen bg-slate-900 text-white ${plex.className}`}
       >
         <Navbar />
-        <Hero />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );

@@ -2,9 +2,9 @@ import { ProfilePic } from "./profile-pic";
 
 export const Hero = () => {
   return (
-    <main className="mb-6 py-10 w-full bg-slate-800">
-      <section className="prose prose-xl mx-auto hero-grid">
-        <div className="p-4 ps-0 flex items-center">
+    <section className="mb-6 py-10 w-full bg-slate-800">
+      <article className="site-width grid-2-1">
+        <div className="p-4 ps-6 flex items-center">
           <div className="ps-2">
             <h1 className="text-2xl text-gray-200">
               What I mean when I say &quot;I am a developer&quot;:
@@ -30,7 +30,7 @@ export const Hero = () => {
         <div>
           <ProfilePic />
         </div>
-      </section>
-    </main>
+      </article>
+    </section>
   );
 };

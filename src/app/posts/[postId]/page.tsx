@@ -40,7 +40,7 @@ export default async function Post({ params }: { params: { postId: string } }) {
   const published = getFormattedDate(date);
 
   return (
-    <main className="px-6 prose prose-xl prose-strong:text-gray-200 mx-auto">
+    <section className="site-width p-6 mt-10 mb-6 prose prose-xl prose-strong:text-gray-200 max-w-none">
       <h1 className="text-3xl text-white mt-4 mb-0">{title}</h1>
       <p className="uppercase text-sm text-teal-500">{published}</p>
       <article className="text-gray-200 text-base">
@@ -51,6 +51,6 @@ export default async function Post({ params }: { params: { postId: string } }) {
           </Link>
         </p>
       </article>
-    </main>
+    </section>
   );
 }

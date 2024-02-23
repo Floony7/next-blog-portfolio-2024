@@ -28,11 +28,19 @@
   --clr-yellow-dark: hsl(41, 100%, 38%);
 }
 
-.fancy-anchor {
-  @apply uppercase text-sm text-teal-500 underline-offset-4 hover:opacity-75;
+.site-width {
+  @apply lg:w-6/12 mx-auto;
 }
 
-.hero-grid {
+.prose-anchor {
+  @apply text-teal-500 underline-offset-4 hover:text-cyan-200;
+}
+
+.fancy-anchor {
+  @apply uppercase text-sm text-teal-500 underline-offset-4 hover:text-cyan-200;
+}
+
+.grid-2-1 {
   display: grid;
   gap: 1rem;
   grid-template-columns: 2fr 1fr;
