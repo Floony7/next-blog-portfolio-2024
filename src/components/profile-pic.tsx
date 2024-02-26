@@ -1,14 +1,19 @@
 import Image from "next/image";
 
-export const ProfilePic = () => {
+type PicProps = {
+  width: number;
+  height: number;
+};
+
+export const ProfilePic = ({ width, height }: PicProps) => {
   return (
     <section className="w-full mx-auto">
       <Image
-        className="border-8 border-teal-500 drop-shadow-xl shadow-black rounded-full mx-auto mt-8 profile-shape mb-1"
+        className="border-8 border-teal-500 drop-shadow-xl shadow-black rounded-full mx-auto mt-8 mb-1"
         src="/images/fred.png"
         alt="Fred Lunjevich"
-        width={250}
-        height={250}
+        width={width}
+        height={height}
         priority={true}
       />
     </section>

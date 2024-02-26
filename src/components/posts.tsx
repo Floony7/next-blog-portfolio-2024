@@ -1,10 +1,10 @@
 import { getSortedPostsData } from "../lib/posts";
 import ListItem from "./list-item";
 
-export const Posts = () => {
-  const posts = getSortedPostsData(3);
+export const Posts = (props: { limit?: number }) => {
+  const posts = getSortedPostsData(props.limit);
   return (
-    <section className="mt-6 p-4">
+    <section className="mt-6">
       <h2 className="text-4xl font-bold dark:text-white/90 font-mono">
         Recent Posts
       </h2>

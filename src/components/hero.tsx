@@ -12,16 +12,19 @@ export const Hero = () => {
               My name is <span className="text-teal-500">Fred</span>
             </h1>
             <h3 className="font-mono text-2xl mt-8">
-              In 2017, I decided to learn JavaScript and React.
+              In 2017, I decided to learn JavaScript and React...
               <br />
               It was the best career decision I ever made.
             </h3>
             <h3 className="font-mono text-2xl mt-8">
-              Now I build applications with TypeScript, React and Next.js
+              Now I&apos;m living the dream building applications with
+              <span className="text-teal-500">&nbsp;TypeScript</span>,
+              <span className="text-teal-500">&nbsp;React</span> and
+              <span className="text-teal-500">&nbsp;Next.js</span>
             </h3>
           </div>
         </div>
-        <ProfilePic />
+        <ProfilePic width={300} height={300} />
       </article>
     </section>
   );
