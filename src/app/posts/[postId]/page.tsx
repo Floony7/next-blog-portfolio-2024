@@ -33,9 +33,11 @@ export default async function Post({ params }: { params: { postId: string } }) {
   const posts = getSortedPostsData();
   const { postId } = params;
 
-  if (!posts.find((post) => post.id === postId)) notFound();
+  if (!posts.find((post) => post.id === postId)) {
+    notFound();
+  }
 
-  const { title, date, contentHtml } = await getPostData(postId);
+  const { title, date, contentHtml, tags } = await getPostData(postId);
 
   const published = getFormattedDate(date);
 
@@ -43,6 +45,19 @@ export default async function Post({ params }: { params: { postId: string } }) {
     <section className="site-width p-6 mt-10 mb-6 prose prose-xl prose-strong:text-gray-200 max-w-none">
       <h1 className="text-3xl text-white mt-4 mb-0">{title}</h1>
       <p className="uppercase text-sm text-teal-500">{published}</p>
+      <p className="text-base">
+        <strong>Tags:&nbsp;</strong>
+        {tags
+          ? tags.map((tag) => (
+              <button
+                key="tag"
+                className="rounded-full bg-rose-900 text-white px-2 mx-1 hover:bg-rose-700"
+              >
+                {tag}
+              </button>
+            ))
+          : null}
+      </p>
       <article className="text-gray-200 text-base">
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
         <p>

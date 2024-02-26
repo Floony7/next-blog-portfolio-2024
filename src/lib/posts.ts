@@ -8,11 +8,13 @@ export type BlogPost = {
   id: string;
   title: string;
   date: string;
+  tags: string[];
+  precis: string;
 };
 
 const postsDirectory = path.join(process.cwd(), "/src/blogposts");
 
-export function getSortedPostsData() {
+export function getSortedPostsData(limit?: number) {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
@@ -30,13 +32,16 @@ export function getSortedPostsData() {
       id,
       title: matterResult.data.title,
       date: matterResult.data.date,
+      tags: matterResult.data.tags ?? [],
+      precis: matterResult.data.precis
     };
 
     // Combine the data with the id
     return blogPost;
   });
   // Sort posts by date
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+  const length = allPostsData.length;
+  return allPostsData.slice(0, limit ?? length).sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export async function getPostData(id: string) {
@@ -57,6 +62,8 @@ export async function getPostData(id: string) {
     title: matterResult.data.title,
     date: matterResult.data.date,
     contentHtml,
+    tags: matterResult.data.tags,
+    precis: matterResult.data.precis
   };
 
   return blogPostWithHTML;

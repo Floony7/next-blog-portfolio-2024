@@ -7,18 +7,23 @@ type Props = {
 };
 
 export default function ListItem({ post }: Props) {
-  const { id, title, date } = post;
+  const { id, title, date, precis } = post;
   const formattedDate = getFormattedDate(date);
   return (
-    <li className="mt-4 text-2xl text-white/90">
-      <Link
-        className="underline underline-offset-4 hover:text-cyan-400"
-        href={`/posts/${id}`}
-      >
+    <li className="my-6 text-2xl text-white/90">
+      <Link className="hover:text-cyan-400" href={`/posts/${id}`}>
         {title}
       </Link>
-      <br />
-      <p className="text-sm uppercase text-teal-500 mt-1">{formattedDate}</p>
+      <p className="text-sm uppercase text-teal-500 my-1">{formattedDate}</p>
+      <p className="text-base">
+        {precis}{" "}
+        <Link
+          className="underline underline-offset-2 hover:text-orange-500 text-cyan-400 transition-all duration-200"
+          href={`/posts/${id}`}
+        >
+          Read More
+        </Link>
+      </p>
     </li>
   );
 }

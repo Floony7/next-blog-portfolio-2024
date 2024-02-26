@@ -2,7 +2,7 @@ import { getSortedPostsData } from "../lib/posts";
 import ListItem from "./list-item";
 
 export const Posts = () => {
-  const posts = getSortedPostsData();
+  const posts = getSortedPostsData(3);
   return (
     <section className="mt-6 mx-auto">
       <h2 className="text-4xl font-bold dark:text-white/90">Posts</h2>
