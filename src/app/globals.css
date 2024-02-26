@@ -40,10 +40,18 @@
   @apply uppercase text-sm text-teal-500 underline-offset-4 hover:text-cyan-200;
 }
 
+.page-title {
+  @apply text-5xl text-white font-mono;
+}
+
 .grid-2-1 {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: auto-fit, minmax(250px, 1fr);
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 2fr 1fr;
+  }
 }
 
 .profile-shape {

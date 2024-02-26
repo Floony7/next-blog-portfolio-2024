@@ -2,34 +2,26 @@ import { ProfilePic } from "./profile-pic";
 
 export const Hero = () => {
   return (
-    <section className="mb-6 py-10 w-full bg-slate-800">
+    <section className="py-10 w-full">
       <article className="site-width grid-2-1">
-        <div className="p-4 ps-6 flex items-center">
-          <div className="ps-2">
-            <h1 className="text-2xl text-gray-200">
-              What I mean when I say &quot;I am a developer&quot;:
+        <div className="p-4 flex items-center">
+          <div>
+            <h1 className="text-5xl font-mono text-gray-200 mb-2">
+              Ahoj, Kia Ora, Hello
+              <br />
+              My name is <span className="text-teal-500">Fred</span>
             </h1>
-            <div className="ps-6">
-              <h2 className="text-2xl italic text-cyan-200 my-0 p-0">
-                developer
-              </h2>
-              <span className="text-gray-200 p-0">/dɪˈvɛləpə/</span>
+            <h3 className="font-mono text-2xl mt-8">
+              In 2017, I decided to learn JavaScript and React.
               <br />
-              <span className="text-gray-200 italic p-0">noun</span>
-              <br />
-              <span className="text-gray-200 italic p-0">
-                a person or thing that develops something.
-              </span>
-              <br />
-              <span className="text-gray-400 italic p-0">
-                &quot;a web developer&quot;
-              </span>
-            </div>
+              It was the best career decision I ever made.
+            </h3>
+            <h3 className="font-mono text-2xl mt-8">
+              Now I build applications with TypeScript, React and Next.js
+            </h3>
           </div>
         </div>
-        <div>
-          <ProfilePic />
-        </div>
+        <ProfilePic />
       </article>
     </section>
   );
