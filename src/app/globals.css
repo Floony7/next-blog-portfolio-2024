@@ -38,7 +38,11 @@ h6 {
 }
 
 .site-width {
-  @apply lg:w-6/12 mx-auto;
+  @apply sm:w-9/12 mx-auto;
+
+  @media (min-width: 1800px) {
+    width: 50%;
+  }
 }
 
 .prose-anchor {
