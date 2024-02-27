@@ -51,7 +51,8 @@ export default async function Post({ params }: { params: { postId: string } }) {
           ? tags.map((tag) => (
               <button
                 key="tag"
-                className="rounded-full bg-rose-900 text-white px-2 mx-1 hover:bg-rose-700"
+                className="rounded-full bg-cyan-700 text-white px-2 py-1 mx-1"
+                disabled={true}
               >
                 {tag}
               </button>

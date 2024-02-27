@@ -20,7 +20,7 @@ export const Hero = () => {
               Now I&apos;m living the dream building applications with
               <span className="text-teal-500">&nbsp;TypeScript</span>,
               <span className="text-teal-500">&nbsp;React</span> and
-              <span className="text-teal-500">&nbsp;Next.js</span>
+              <span className="text-teal-500">&nbsp;Next.js</span>.
             </h3>
           </div>
         </div>

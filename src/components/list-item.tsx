@@ -11,7 +11,7 @@ export default function ListItem({ post, displayPrecis }: Props) {
   const { id, title, date, precis } = post;
   const formattedDate = getFormattedDate(date);
   return (
-    <li className="my-6 text-2xl text-white/90 bg-slate-700 p-3 rounded-md">
+    <li className="my-6 text-2xl text-white/90 bg-slate-800 p-3 rounded-md">
       <Link className="hover:text-cyan-400 font-mono" href={`/posts/${id}`}>
         {title}
       </Link>
@@ -21,7 +21,7 @@ export default function ListItem({ post, displayPrecis }: Props) {
           {precis}
           <br />
           <Link
-            className="underline underline-offset-2 hover:text-orange-500 text-cyan-400 transition-all duration-200"
+            className=" hover:text-orange-500 text-cyan-400 transition-all duration-200"
             href={`/posts/${id}`}
           >
             Read More &gt;&gt;
