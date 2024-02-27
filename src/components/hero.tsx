@@ -7,7 +7,7 @@ export const Hero = () => {
         <div className="p-4 flex items-center">
           <div>
             <h1 className="text-5xl font-mono text-gray-200 mb-2">
-              Ahoj, Kia Ora, Hello
+              Hello, Kia Ora
               <br />
               My name is <span className="text-teal-500">Fred</span>
             </h1>

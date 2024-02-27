@@ -8,12 +8,12 @@ export default function About() {
         <div>
           <p>
             My journey into web and software development was not what you call
-            &ldquo;typical&rdquo;. HTML was introduced to me during my bachelor
-            degree in Communication Studies at Auckland University of Technology
-            (AUT), circa 2000. Then, when CSS morphed into CSS3, I was drawn to
-            designing websites with WordPress. My day job, however, was Web
-            Co-odinator at AUT &#8212; a role that luckily had some web
-            development attached.
+            &ldquo;typical&rdquo;. HTML was introduced to me during my
+            bachelor&apos; degree in Communication Studies at Auckland
+            University of Technology (AUT), circa 2000. Then, when CSS morphed
+            into CSS3, I was drawn to designing websites with WordPress. My day
+            job, however, was Web Co-odinator at AUT &#8212; a role that luckily
+            had some web development attached.
           </p>
           <p>
             Not satisfied with my career direction, in 2017 I made the jump to
@@ -52,13 +52,14 @@ export default function About() {
           </p>
           <p>
             What&apos;s next? More Next.js I hope! This blog is built with
-            Nexct.js 14 and I enjoyed the development process so much that
-            I&apos;d like to do more! frontend is definitely
-            &ldquo;wheelhouse&rdquo;, however, I love using Node.js and
-            developing APIs. GraphQL is definitely something I&apos;m looking
-            forward to doing more of also. Web and software development
-            definitely is a &ldquo;pick your own path&rdquo; and mine is
-            starting to form.
+            Next.js 14 with Tailwind. I enjoyed the development process so much
+            that I&apos;d like to follow the rabbit hole and do this fulltime.
+            Frontend is definitely &ldquo;wheelhouse&rdquo;, however, I love
+            using Node.js and developing APIs. GraphQL is definitely something
+            I&apos;m looking forward to doing more of also. Web and software
+            development definitely is a &ldquo;pick your own path&rdquo;. React
+            and it&apos;s wider ecosystem provides so much opportunity and
+            I&apos;m excited to be forging my own path.
           </p>
         </div>
         <aside className="flex flex-col items-center">
