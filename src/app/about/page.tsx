@@ -52,14 +52,13 @@ export default function About() {
           </p>
           <p>
             What&apos;s next? More Next.js I hope! This blog is built with
-            Next.js 14 with Tailwind. I enjoyed the development process so much
+            Next.js 14 and Tailwind. I enjoyed the development process so much
             that I&apos;d like to follow the rabbit hole and do this fulltime.
-            Frontend is definitely &ldquo;wheelhouse&rdquo;, however, I love
-            using Node.js and developing APIs. GraphQL is definitely something
-            I&apos;m looking forward to doing more of also. Web and software
-            development definitely is a &ldquo;pick your own path&rdquo;. React
-            and it&apos;s wider ecosystem provides so much opportunity and
-            I&apos;m excited to be forging my own path.
+            Frontend is definitely my &ldquo;wheelhouse&rdquo;, however, my
+            curiosity extends to Node.js, REST API development and GraphQL. Web
+            and software development definitely is a &ldquo;pick your own
+            path&rdquo; deal and I&apos;m happy to be forging my own identity
+            using React, Next.js and the wider ecosystem.
           </p>
         </div>
         <aside className="flex flex-col items-center">

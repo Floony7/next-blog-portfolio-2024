@@ -21,7 +21,7 @@ export default function ListItem({ post, displayPrecis }: Props) {
           {precis}
           <br />
           <Link
-            className=" hover:text-orange-500 text-cyan-400 transition-all duration-200"
+            className="hover:text-orange-500 text-cyan-400 transition-all duration-200"
             href={`/posts/${id}`}
           >
             Read More &gt;&gt;

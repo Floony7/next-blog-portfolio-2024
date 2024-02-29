@@ -67,6 +67,16 @@ h6 {
   }
 }
 
+.grid-1-2 {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(250px, 1fr), auto-fit;
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
 .profile-shape {
   border-radius: 58% 42% 41% 59% / 51% 78% 22% 49%;
   transition: border-radius 0.4s ease-in-out;
