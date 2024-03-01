@@ -16,10 +16,10 @@ export default function About() {
             had some web development attached.
           </p>
           <p>
-            Not satisfied with my career direction, in 2017 I made the jump to
-            learning the programming side of the web (JavaScript and React). To
-            be honest, I&apos;m not sure how I survived all these years without
-            programming skills!
+            Not satisfied with my marketing career direction, in 2017 I made the
+            jump to learning the programming side of the web (JavaScript and
+            React). To be honest, I&apos;m not sure how I survived all these
+            years without programming skills!
           </p>
           <p>
             When the 2020 Covid lockdowns arrived in New Zealand, I was in full
@@ -46,9 +46,10 @@ export default function About() {
             &ldquo;Luck is when opportunity and preparedness meet&rdquo;
           </blockquote>
           <p>
-            With the assistance of some very talented developers and a desire to
-            learn, I have made a successful move into software and web
-            development by adding TypeScript to my growing list of competencies.
+            With the assistance of some very talented developers and an
+            insatiable desire to learn, I have made a successful transition into
+            software and web development by adding TypeScript to my growing list
+            of competencies.
           </p>
           <p>
             What&apos;s next? More Next.js I hope! This blog is built with

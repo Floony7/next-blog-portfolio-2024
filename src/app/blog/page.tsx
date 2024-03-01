@@ -4,7 +4,7 @@ import { getSortedPostsData } from "@/lib/posts";
 
 export default function Blog() {
   // Todo: Dynamically source posts based on tag or get all posts
-  // May need to use conetxt to serve this data
+  // May need to use context to serve this data
   const posts = getSortedPostsData();
 
   return (

@@ -16,18 +16,15 @@ export default function ListItem({ post, displayPrecis }: Props) {
         {title}
       </Link>
       <p className="text-sm uppercase text-teal-500 my-1">{formattedDate}</p>
-      {displayPrecis ? (
-        <p className="text-base">
-          {precis}
-          <br />
-          <Link
-            className="hover:text-orange-500 text-cyan-400 transition-all duration-200"
-            href={`/posts/${id}`}
-          >
-            Read More &gt;&gt;
-          </Link>
-        </p>
-      ) : null}
+      {displayPrecis ? <p className="text-base">{precis}</p> : null}
+      <p>
+        <Link
+          className="hover:text-orange-500 text-cyan-400 text-sm transition-all duration-200"
+          href={`/posts/${id}`}
+        >
+          Read More &#10148;
+        </Link>
+      </p>
     </li>
   );
 }
