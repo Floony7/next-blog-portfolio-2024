@@ -1,5 +1,16 @@
 import { nanoid } from 'nanoid';
 
+interface UserDataItem {
+  name: string;
+  value: string;
+}
+
+export const userData: UserDataItem[] = [
+  { name: 'From', value: 'Auckland, New Zealand' },
+  { name: 'Residence', value: 'Birmingham, UK' },
+  { name: 'Currently Learning', value: 'New React hooks, Next.js revalidation + caching, brushing up on GraphQL' },
+  { name: 'Likes', value: 'Ice Hockey, Kettlebells, Calisthenics, Guitar, Language Learning' }
+];
 export interface Project {
     id: string;
     img: string;
@@ -35,7 +46,7 @@ export const projectsData: Project[] = [
     title: 'React ecommerce site',
     subtitle: 'React / Redux / Firebase / Styled Components / Stripe',
     description: 'Great Gatsby',
-    url: 'h',
+    url: '',
     repo: 'https://github.com/Floony7/ecommerce-react',
   },
   {

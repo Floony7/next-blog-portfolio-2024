@@ -1,4 +1,5 @@
 import { ProfilePic } from "@/components/profile-pic";
+import { userData } from "@/data/mock";
 
 export default function About() {
   return (
@@ -67,26 +68,24 @@ export default function About() {
             <ProfilePic width={250} height={250} />
             <h4 className="text-white font-mono my-4 text-center">Vitals</h4>
             <ul className="text-gray-200 list-none ms-6 px-0 font-mono">
-              <li className="my-0">
-                <span className="font-semibold text-teal-400">From:&nbsp;</span>
-                New Zealand
-              </li>
-              <li className="my-0">
-                <span className="font-semibold text-teal-400">
-                  Residence:&nbsp;
-                </span>
-                Birmingham, UK
-              </li>
-              <li className="my-0">
-                <span className="font-semibold text-teal-400">
-                  Likes:&nbsp;
-                </span>
-                Ice Hockey, Kettlebells, Guitar, Language Learning
-              </li>
+              {userData
+                ? userData.map((item, i) => (
+                    <VitalsItem key={i} name={item.name} text={item.value} />
+                  ))
+                : null}
             </ul>
           </div>
         </aside>
       </article>
     </section>
+  );
+}
+
+function VitalsItem({ name, text }: { name: string; text: string }) {
+  return (
+    <li className="my-0">
+      <span className="font-semibold text-teal-400">{name}:&nbsp;</span>
+      {text}
+    </li>
   );
 }
