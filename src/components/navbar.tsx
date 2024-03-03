@@ -14,7 +14,7 @@ export default function Navbar() {
             Fred Lunjevich
           </Link>
         </h1>
-        <section className="flex justify-between min-w-96 mt-1 text-xl">
+        <section className="flex justify-evenly lg:justify-between min-w-96 mt-1 text-xl">
           <Link
             href="/portfolio"
             className="text-white/85 no-underline hover:text-white"
