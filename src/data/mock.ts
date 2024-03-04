@@ -56,7 +56,7 @@ export const projectsData: Project[] = [
     subtitle: '',
     description: 'Built in 2021 using Gatsby and vanilla JavaScript. I used this portfolio to experiment with some CSS background-blend-mode techniques. From a design perspective, I topted for the one page treatment, owing to the simplicity of the content and data.',
     url: '',
-    repo: '',
+    repo: 'https://github.com/Floony7/gatsby-portfolio',
   },
   // {
   //   id: nanoid(),
