@@ -27,6 +27,7 @@ export default function PortfolioItem(props: { project: Project }) {
             {url !== "" ? (
               <Link
                 href={url}
+                target="_blank"
                 className="hover:text-orange-500 text-cyan-300 transition-all duration-200 no-underline"
               >
                 View Project &#10148;
@@ -39,6 +40,7 @@ export default function PortfolioItem(props: { project: Project }) {
             {repo !== "" ? (
               <Link
                 href={repo}
+                target="_blank"
                 className="hover:text-cyan-300 text-orange-500 transition-all duration-200 no-underline"
               >
                 GitHub Repo &#10148;
