@@ -43,9 +43,9 @@ export const projectsData: Project[] = [
   {
     id: nanoid(),
     img: 'ecommerce-react-icestore.png',
-    title: 'React ecommerce site',
+    title: 'React ecommerce site (In Progress)',
     subtitle: 'React / Redux / Firebase / Styled Components / Stripe',
-    description: 'In Progress...',
+    description: 'Building a full ecommerce site with React.',
     url: '',
     repo: 'https://github.com/Floony7/ecommerce-react',
   },
