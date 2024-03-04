@@ -7,14 +7,14 @@ export default function SocialLinks({ iconSize = 1 }: { iconSize?: number }) {
   return (
     <section className="flex flex-row justify-center gap-2 text-white text-4xl lg:text-5xl">
       <Link
-        className="text-white/85 hover:text-white"
+        className="text-white/85 hover:text-amber-200"
         href="https://www.linkedin.com/in/fred-lunjevich/"
         target="_blank"
       >
         <FaLinkedin size={`${size}rem`} />
       </Link>
       <Link
-        className="text-white/85 hover:text-white"
+        className="text-white/85 hover:text-amber-200"
         href="https://github.com/Floony7"
         target="_blank"
       >
