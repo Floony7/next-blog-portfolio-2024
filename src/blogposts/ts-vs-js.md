@@ -1,7 +1,7 @@
 ---
 title: 'Why TypeScript is necessary'
 date: '2024-03-02'
-tags: ['SSR']
+tags: ['TypeScript', 'JavaScript']
 precis: "Like many people learning to programming for the web, I resisted learning TypeScript. Now I find it hard to go back to vanilla JavaScript. But not everyone is happy with TypeScript and think it is overkill. Do they have a point?."
 ---
 Ahh, TypeScript, how could I ever get by without thee? While I'm a massive fan of TypeScript, not everyone feels the same love for it. In fact, the comment below which is from a recent Linkedin post inspired me to think more deeply about the role TypeScript plays and why it is even a thing.
