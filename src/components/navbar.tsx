@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaYoutube, FaTwitter, FaGithub, FaLaptop } from "react-icons/fa";
+import Image from "next/image";
 import SocialLinks from "./social-links";
 
 export default function Navbar() {
@@ -11,7 +11,14 @@ export default function Navbar() {
             href="/"
             className="text-white hover:text-amber-200 no-underline"
           >
-            Fred Lunjevich
+            <Image
+              className="drop-shadow-xl shadow-black mx-auto"
+              src="/images/floony-initials-logo.svg"
+              alt="Fred Lunjevich"
+              width="80"
+              height="80"
+              priority={true}
+            />
           </Link>
         </h1>
         <section className="flex justify-evenly lg:justify-between min-w-96 mt-1 text-xl">
