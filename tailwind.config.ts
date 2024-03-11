@@ -7,6 +7,7 @@ const disabledCss = {
 	'blockquote p:last-of-type::after': false,
 	pre: false,
 	code: false,
+  blockquote: { color: 'hsl(186, 94%, 82%)'},
   a: { color: 'rgb(45, 212, 191)', '&:hover': { color: '#a5f3fc'}},
 	'pre code': false,
 }
