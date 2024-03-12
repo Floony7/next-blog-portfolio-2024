@@ -19,9 +19,9 @@ This was a fundamental change to the core of how we create routes and interact w
 
 The App Router is fairly intuitive. The added complexity and flexibility starts with the folder-based way you lay out your pages. Instead of having a Pages directory, inside the App folder you simply add a folder with the name of the path the add a `Page.tsx` file. Include all your markup and JSX here as you would in any React component.
 
-The directory can have a `Page.tsx` folder OR a `route.ts` folder. With the latter file you can specify endpoints with all the HTTP enpoints you wish. Again, the route is simply created through the folder structure and the all your CRUD methods for that route specificed in the `route.ts` file.
+The directory can have a `Page.tsx` file OR a `route.ts` file. If you are defining a simple page routing ssytem, set you r folders up as the paths you want to create and add that `Page.tsx` to include all your markup and React code. Use the `route.ts` file to create endpoints with all the HTTP requests that you wish. 
 
-This too is a marked change from how API routing was handled previously, whereby you created an API folder and included your routing files in there.
+This too is a marked change from how API routing was handled previously, whereby you created an API folder and included your routing files in there, much like you would in an Express.js backend.
 
 I'll outline more of this in upcoming articles, but for now, the [Route Handler docs](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) outline how to create API endpoints using Request and Response objects.
 
