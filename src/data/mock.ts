@@ -6,10 +6,11 @@ interface UserDataItem {
 }
 
 export const userData: UserDataItem[] = [
+  { name: 'Name', value: 'Fred Lunjevich' },
   { name: 'From', value: 'Auckland, New Zealand' },
   { name: 'Residence', value: 'Birmingham, UK' },
   { name: 'Currently Learning', value: 'New React hooks, Next.js revalidation + caching, brushing up on GraphQL' },
-  { name: 'Likes', value: 'Ice Hockey, Kettlebells, Calisthenics, Guitar, Language Learning' }
+  { name: 'Likes', value: 'Ice Hockey, Kettlebells, Calisthenics, Guitar, Conservation' }
 ];
 export interface Project {
     id: string;
@@ -54,7 +55,7 @@ export const projectsData: Project[] = [
     img: 'gatsby-portfolio.png',
     title: 'Previous Portfolio',
     subtitle: '',
-    description: 'Built in 2021 using Gatsby and vanilla JavaScript. I used this portfolio to experiment with some CSS background-blend-mode techniques. From a design perspective, I topted for the one page treatment, owing to the simplicity of the content and data.',
+    description: 'Built in 2021 using Gatsby and vanilla JavaScript. I used this portfolio to experiment with some CSS background-blend-mode techniques. From a design perspective, I opted for the one page treatment, owing to the simplicity of the content and data.',
     url: '',
     repo: 'https://github.com/Floony7/gatsby-portfolio',
   },
