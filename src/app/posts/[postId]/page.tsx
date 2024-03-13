@@ -26,6 +26,8 @@ export async function generateMetadata({
 
   return {
     title: post.title,
+    description: post.precis,
+    keywords: post.tags.join(", "),
   };
 }
 
