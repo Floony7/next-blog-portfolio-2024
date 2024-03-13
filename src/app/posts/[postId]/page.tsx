@@ -48,9 +48,9 @@ export default async function Post({ params }: { params: { postId: string } }) {
       <p className="text-base">
         <strong>Tags:&nbsp;</strong>
         {tags
-          ? tags.map((tag) => (
+          ? tags.map((tag, i) => (
               <button
-                key="tag"
+                key={i}
                 className="rounded-full bg-cyan-700 text-white px-2 py-1 mx-1"
                 disabled={true}
               >
@@ -62,8 +62,8 @@ export default async function Post({ params }: { params: { postId: string } }) {
       <article className="text-gray-200 text-base">
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
         <p>
-          <Link className="fancy-anchor" href="/">
-            ← Back to home
+          <Link className="fancy-anchor" href="/blog">
+            ← Back to blog
           </Link>
         </p>
       </article>

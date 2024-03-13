@@ -12,7 +12,7 @@ export default function ListItem({ post, displayPrecis }: Props) {
   const formattedDate = getFormattedDate(date);
   return (
     <li className="my-6 text-2xl text-white/90 bg-slate-800 p-3 rounded-md">
-      <Link className="hover:text-cyan-400 font-mono" href={`/posts/${id}`}>
+      <Link className="hover:text-cyan-400 font-semibold" href={`/posts/${id}`}>
         {title}
       </Link>
       <p className="text-sm uppercase text-teal-500 my-1">{formattedDate}</p>
