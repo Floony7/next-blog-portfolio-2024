@@ -59,7 +59,7 @@ pre {
 }
 
 .page-title {
-  @apply text-5xl font-semibold text-white font-mono;
+  @apply text-5xl font-semibold text-white;
 }
 
 .grid-2-1 {

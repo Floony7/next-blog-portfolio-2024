@@ -4,24 +4,43 @@ import { userData } from "@/data/mock";
 export default function About() {
   return (
     <section className="site-width p-6 mt-10 mb-6">
-      <h1 className="page-title">About</h1>
+      <h1 className="page-title">How I got here...</h1>
       <article className="prose prose-xl max-w-none text-gray-200 grid-2-1">
         <div>
           <p>
             My journey into web and software development was not what you call
             &ldquo;typical&rdquo;. HTML was introduced to me during my
             bachelor&apos; degree in Communication Studies at Auckland
-            University of Technology (AUT), circa 2000. Then, when CSS morphed
-            into CSS3, I was drawn to designing websites with WordPress. My day
-            job, however, was Web Co-odinator at AUT &#8212; a role that luckily
-            had some web development attached.
+            University of Technology (AUT), circa 2000.
           </p>
           <p>
-            Not satisfied with my marketing career direction, in 2017 I made the
-            jump to learning the programming side of the web (JavaScript and
-            React). To be honest, I&apos;m not sure how I survived all these
-            years without programming skills!
+            I became Web Co-odinator at the same university in 2011, which gave
+            me some web development opportunities, back wehn jQuery was all the
+            rage and web layouts were a bunch of floating and absolutely
+            positioned divs.
           </p>
+          <p>
+            Each year AUT would pay for me to head down to Wellington for the
+            annaul&nbsp;{" "}
+            <a
+              href="https://www.webstock.org.nz/"
+              target="_blank"
+              className="prose-anchor"
+            >
+              Webstock
+            </a>
+            &nbsp; conference. Meeting highly respected people oin the web
+            industry inspired me to learn CSS and I promptly began using my new
+            found knowledge mto make WordPress websites for local businesses and
+            AUT academics.
+          </p>
+          <p>
+            Fast forward to 2017. Not satisfied with my marketing career
+            direction, I made the jump to learning the programming side of the
+            web (JavaScript and React). To be honest, I&apos;m not sure how I
+            survived all these years without programming skills!
+          </p>
+          <h3>The Tipping Point</h3>
           <p>
             When the 2020 Covid lockdowns arrived in New Zealand, I was in full
             React and frontend immersion mode. Later that year, I joined motion
