@@ -10,6 +10,16 @@ export const userData = [
   { name: 'Likes', value: 'Ice Hockey, Kettlebells, Calisthenics, Guitar, Conservation' }
 ] as const;
 
+export type Project = {
+    id: string,
+    img: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    url: string;
+    repo: string;
+}
+
 export const projectsData = [
   {
     id: nanoid(),
