@@ -9,17 +9,8 @@ export const userData = [
   { name: 'Currently Learning', value: 'New React hooks, Next.js revalidation + caching, brushing up on GraphQL' },
   { name: 'Likes', value: 'Ice Hockey, Kettlebells, Calisthenics, Guitar, Conservation' }
 ] as const;
-export interface Project {
-    id: string;
-    img: string;
-    title: string;
-    subtitle?: string;
-    description: string;
-    url: string;
-    repo: string;
-}
 
-export const projectsData: Project[] = [
+export const projectsData = [
   {
     id: nanoid(),
     img: 'hand-engine-focused.png',
@@ -56,24 +47,6 @@ export const projectsData: Project[] = [
     url: '',
     repo: 'https://github.com/Floony7/gatsby-portfolio',
   },
-  // {
-  //   id: nanoid(),
-  //   img: 'periodic.jpg',
-  //   title: 'React Periodic Table app',
-  //   subtitle: 'Project that uses React and spedifically the Context API to produce a visualisation of the elements of the Periodic Table. Previously, this project used a  third-party API, however I created a new API with Node.js for the purposes of owning the data and persisting it as long as I liked.',
-  //   description: '',
-  //   url: "",
-  //   repo: 'https://github.com/Floony7/periodic-table-app-react-context',
-  // },
-  // {
-  //   id: nanoid(),
-  //   img: 'countries.jpg',
-  //   title: 'React Countries app',
-  //   subtitle: 'Using a countries API to pull data through on countries and the regions they are situated. Uses React Context API and React Router to display country pages.',
-  //   description: '',
-  //   url: "",
-  //   repo: 'https://github.com/Floony7/react-countries-reference-app',
-  // },
   {
     id: nanoid(),
     img: 'piko.png',
@@ -91,4 +64,4 @@ export const projectsData: Project[] = [
     url: '',
     repo: '',
   },
-];
+] as const;
