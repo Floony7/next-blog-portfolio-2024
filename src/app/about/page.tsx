@@ -9,16 +9,16 @@ export default function About() {
       <article className="prose prose-xl max-w-none text-gray-200 grid-2-1">
         <div>
           <p>
-            My journey into web and software development was not what you call
-            &ldquo;typical&rdquo;. HTML was introduced to me during my
+            My journey into web and software development was not what you&apos;d
+            call &ldquo;typical&rdquo;. HTML was introduced to me during my
             bachelor&apos; degree in Communication Studies at Auckland
             University of Technology (AUT), circa 2000.
           </p>
           <p>
-            I became Web Co-odinator at the same university in 2011, which gave
-            me some web development opportunities, back when jQuery was all the
-            rage and web layouts were a bunch of floating and absolute
-            positioned divs.
+            I became Web Co-ordinator in the Humanities faculty at the same
+            university in 2011, which gave me some web development
+            opportunities, back when jQuery was all the rage and web layouts
+            were a bunch of floating and absolute positioned divs.
           </p>
           <p>
             Each year AUT would pay for me to head down to Wellington for the
