@@ -1,3 +1,4 @@
+import FplRank from "@/components/fpl-rank";
 import { ProfilePic } from "@/components/profile-pic";
 import { userData } from "@/data/mock";
 
@@ -15,13 +16,13 @@ export default function About() {
           </p>
           <p>
             I became Web Co-odinator at the same university in 2011, which gave
-            me some web development opportunities, back wehn jQuery was all the
-            rage and web layouts were a bunch of floating and absolutely
+            me some web development opportunities, back when jQuery was all the
+            rage and web layouts were a bunch of floating and absolute
             positioned divs.
           </p>
           <p>
             Each year AUT would pay for me to head down to Wellington for the
-            annaul&nbsp;{" "}
+            annual&nbsp;{" "}
             <a
               href="https://www.webstock.org.nz/"
               target="_blank"
@@ -29,10 +30,10 @@ export default function About() {
             >
               Webstock
             </a>
-            &nbsp; conference. Meeting highly respected people oin the web
-            industry inspired me to learn CSS and I promptly began using my new
-            found knowledge mto make WordPress websites for local businesses and
-            AUT academics.
+            &nbsp; conference. Meeting highly respected people in the web
+            industry inspired me to learn CSS to a high level and I promptly
+            began using my new found knowledge to make WordPress websites for
+            local businesses and AUT academics.
           </p>
           <p>
             Fast forward to 2017. Not satisfied with my marketing career
@@ -40,7 +41,7 @@ export default function About() {
             web (JavaScript and React). To be honest, I&apos;m not sure how I
             survived all these years without programming skills!
           </p>
-          <h3>The Tipping Point</h3>
+          <h3>My big break</h3>
           <p>
             When the 2020 Covid lockdowns arrived in New Zealand, I was in full
             React and frontend immersion mode. Later that year, I joined motion
@@ -59,17 +60,24 @@ export default function About() {
             into the Software Team. It seems the Software Lead saw enough
             promise in my lockdown React &ldquo;doodles&rdquo; that he entrusted
             me with the frontend duties in a rebuild of the company&apos;s
-            flagship software Hand Engine. This was the &ldquo;lucky&rdquo;
-            break I was looking for.
+            flagship software &#8212; Hand Engine. This was the
+            &ldquo;lucky&rdquo; break I was looking for.
           </p>
           <blockquote className="text-cyan-200 text-2xl">
             &ldquo;Luck is when opportunity and preparedness meet&rdquo;
           </blockquote>
+          <h3>Shipping off to the UK</h3>
           <p>
-            With the assistance of some very talented developers and an
-            insatiable desire to learn, I have made a successful transition into
-            software and web development by adding TypeScript to my growing list
-            of competencies.
+            2022 saw my wife and I finally realise our dream of moving to the
+            UK. My wife grew up in Birmingham (she was in the room when Duran
+            Duran played their first gig!)
+          </p>
+          <p>
+            For me, it was a big step moving away from all my friends and
+            family, but I was and am excited about living on this side of the
+            world. I have been fortunate to get a developer role, thrive in it
+            and work the entire time it took for us to move into a house (all 9
+            months of it!)
           </p>
           <p>
             What&apos;s next? More Next.js I hope! This blog is built with
@@ -93,6 +101,7 @@ export default function About() {
                   ))
                 : null}
             </ul>
+            <FplRank />
           </div>
         </aside>
       </article>
