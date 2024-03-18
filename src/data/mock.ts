@@ -7,7 +7,7 @@ export const userData = [
   { name: 'From', value: 'Auckland, New Zealand' },
   { name: 'Residence', value: 'Birmingham, UK' },
   { name: 'Currently Learning', value: 'New React hooks, Next.js revalidation + caching, brushing up on GraphQL' },
-  { name: 'Likes', value: 'Ice Hockey, Kettlebells, Calisthenics, Guitar, Conservation' }
+  { name: 'Likes', value: 'Ice Hockey, Strength Training, Guitar, Conservation, Fantasy Premier League' }
 ] as const;
 
 export type Project = {
