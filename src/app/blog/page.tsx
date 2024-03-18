@@ -1,5 +1,5 @@
 import { Posts } from "@/components/posts";
-import { tags } from "@/data/tags";
+import { tags } from "@/data/mock";
 import { getSortedPostsData } from "@/lib/posts";
 
 export default function Blog() {

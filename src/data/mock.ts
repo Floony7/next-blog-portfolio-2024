@@ -1,17 +1,14 @@
 import { nanoid } from 'nanoid';
 
-interface UserDataItem {
-  name: string;
-  value: string;
-}
+export const tags = ['Next.js', 'React', 'TypeScript', 'Server Side Rendering', 'React Hooks', 'CSS'] as const;
 
-export const userData: UserDataItem[] = [
+export const userData = [
   { name: 'Name', value: 'Fred Lunjevich' },
   { name: 'From', value: 'Auckland, New Zealand' },
   { name: 'Residence', value: 'Birmingham, UK' },
   { name: 'Currently Learning', value: 'New React hooks, Next.js revalidation + caching, brushing up on GraphQL' },
   { name: 'Likes', value: 'Ice Hockey, Kettlebells, Calisthenics, Guitar, Conservation' }
-];
+] as const;
 export interface Project {
     id: string;
     img: string;
