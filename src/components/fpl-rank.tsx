@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, Suspense } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
 export default function FplRank() {
@@ -28,12 +28,10 @@ export default function FplRank() {
     return delta;
   }, [ranks.oldRank, ranks.rank]);
 
-  console.log(rankChange);
-
   return (
     <section className="bg-gradient-to-r from-cyan-400 to-green-500 text-white p-3">
       <div className="flex justify-center">
-        FPL Rank: {ranks.rank} change:&nbsp;
+        FPL Rank: {ranks.rank} | Change:&nbsp;
         <span className="mx-1">
           {rankChange < 0 ? (
             <FaChevronDown className="mt-2" />
@@ -41,7 +39,7 @@ export default function FplRank() {
             <FaChevronUp className="mt-2" />
           )}
         </span>
-        {Math.abs(rankChange)}
+        {isNaN(rankChange) ? 0 : `${Math.abs(rankChange)}%`}
       </div>
     </section>
   );

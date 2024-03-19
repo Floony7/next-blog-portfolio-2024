@@ -6,7 +6,6 @@ export async function GET() {
 const res = await fetch(ENDPOINT);
 const data = await res.json();
 
-// const entries = Object.entries(data);
 const overallEntry = data.leagues.classic.find((e: { name: string; }) => e.name === "Overall");
 
 return NextResponse.json(overallEntry);
