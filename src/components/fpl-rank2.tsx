@@ -48,7 +48,7 @@ export default async function FplRank2({ fplId }: { fplId: number }) {
   }
 
   return (
-    <section className="bg-gradient-to-r from-cyan-400 to-green-500 text-white p-3 flex justify-center">
+    <section className="bg-gradient-to-r from-cyan-500 to-green-600 text-white p-3 flex justify-center">
       <Rank />
     </section>
   );
