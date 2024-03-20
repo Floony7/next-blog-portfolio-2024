@@ -60,7 +60,7 @@ export default function FplRank() {
 ```
 Here we have numerous lines of code at the top of our component dedicated solely to fetching game rank data and setting it in state.
 
-Let's move all this code out of the component and move it to a separate function at the end of the file. Note, if this functionality is used elsewhere also, lift it from the component file and into a `utils` or `shared` folder for reuse.
+Let's move all this code out of the component and into a separate function at the end of the file. Note, if this functionality is used elsewhere also, lift it from the component file and into a `utils` or `shared` folder for reuse.
 
 ```js
 function useSetFPLData() {
@@ -88,7 +88,7 @@ All we need to do is call the custom hook and extract the data. I've destructure
 
 ```js
 export default function FplRank() {
- const {rank, oldRank } = useSetFPLData();
+ const { rank, oldRank } = useSetFPLData();
  ...
 };
  ```
