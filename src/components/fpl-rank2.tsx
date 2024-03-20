@@ -32,9 +32,10 @@ export default async function FplRank2({ fplId }: { fplId: number }) {
         <h4 className="m-0 p-0 flex justify-center">
           My Fantasy Premier League
         </h4>
-        <div className="flex justify-center font-mono">
-          Rank: {overallEntry.entry_rank} | Change:
-          <span className="mx-1">
+        <div className="flex md:justify-center font-mono">
+          Rank: {overallEntry.entry_rank} |
+          <span className="mx-1 flex flex-nowrap">
+            Change:
             {change < 0 ? (
               <FaChevronDown className="mt-2 mx-1" />
             ) : (
