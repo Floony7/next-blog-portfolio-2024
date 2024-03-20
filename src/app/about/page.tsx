@@ -12,7 +12,7 @@ export default function About() {
           <p>
             My journey into web and software development was not what you&apos;d
             call &ldquo;typical&rdquo;. HTML was introduced to me during my
-            bachelor&apos; degree in Communication Studies at Auckland
+            bachelor&apos;s degree in Communication Studies at Auckland
             University of Technology (AUT), circa 2000.
           </p>
           <p>
