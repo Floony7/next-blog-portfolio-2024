@@ -1,4 +1,3 @@
-import FplRank from "@/components/fpl-rank";
 import FplRank2 from "@/components/fpl-rank2";
 import { ProfilePic } from "@/components/profile-pic";
 import { userData } from "@/data/mock";
@@ -102,7 +101,6 @@ export default function About() {
                   ))
                 : null}
             </ul>
-            {/* <FplRank /> */}
             <FplRank2 fplId={9348} />
           </div>
         </aside>

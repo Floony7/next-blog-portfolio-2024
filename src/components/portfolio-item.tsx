@@ -3,13 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function PortfolioItem(props: { project: Project }) {
-  const { id, img, title, subtitle, description, url, repo } = props.project;
+  const { id, img, title, subtitle, description, url, repo, hasVideo } =
+    props.project;
 
   return (
     <section key={id} className="grid-1-2 p-4 bg-slate-700 mt-2 rounded-xl">
       <div>
         <Image
-          className="drop-shadow-xl shadow-black mx-auto"
+          className="drop-shadow-xl shadow-black mx-auto mb-0"
           src={`/images/portfolio/${img}`}
           alt="Fred Lunjevich"
           width="600"
@@ -30,7 +31,7 @@ export default function PortfolioItem(props: { project: Project }) {
                 target="_blank"
                 className="hover:text-orange-500 text-cyan-300 transition-all duration-200 no-underline"
               >
-                View Project &#10148;
+                {hasVideo === true ? "View Video" : "View Project"} &#10148;
               </Link>
             ) : (
               "Not currently live"

@@ -18,6 +18,7 @@ export type Project = {
     description: string;
     url: string;
     repo: string;
+    hasVideo: boolean;
 }
 
 export const projectsData = [
@@ -29,6 +30,7 @@ export const projectsData = [
     description: 'UX and UI design and development, Redux state implementation, creation of info panels, features, windows, custom hand implementations (Three.js).',
     url: 'https://stretchsense.com/',
     repo: '',
+    hasVideo: false
   },
   {
     id: nanoid(),
@@ -38,6 +40,7 @@ export const projectsData = [
     description: 'UI implementation for calibrating StretchSense Fidelity gloves. The revision of glove is established upon device connection, which switches the UI for calibration. This image shows the manual calibration for an older revision of StretchSense gloves.',
     url: 'https://floony7.wistia.com/medias/07x2whfb3a',
     repo: '',
+    hasVideo: false
   },
   {
     id: nanoid(),
@@ -47,6 +50,7 @@ export const projectsData = [
     description: 'Building a full ecommerce site with React.',
     url: '',
     repo: 'https://github.com/Floony7/ecommerce-react',
+    hasVideo: false
   },
   {
     id: nanoid(),
@@ -56,6 +60,7 @@ export const projectsData = [
     description: 'Built in 2021 using Gatsby and vanilla JavaScript. I used this portfolio to experiment with some CSS background-blend-mode techniques. From a design perspective, I opted for the one page treatment, owing to the simplicity of the content and data.',
     url: '',
     repo: 'https://github.com/Floony7/gatsby-portfolio',
+    hasVideo: false
   },
   {
     id: nanoid(),
@@ -65,6 +70,7 @@ export const projectsData = [
     description: '',
     url: '',
     repo: '',
+    hasVideo: false
   },  {
     id: nanoid(),
     img: 'fourseasons.png',
@@ -73,5 +79,6 @@ export const projectsData = [
     description: '',
     url: '',
     repo: '',
+    hasVideo: false
   },
 ] as const;
