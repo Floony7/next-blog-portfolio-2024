@@ -12,6 +12,7 @@ export const userData = [
 
 export type Project = {
     id: string,
+    shortName: string;
     img: string;
     title: string;
     subtitle: string;
@@ -19,11 +20,13 @@ export type Project = {
     url: string;
     repo: string;
     hasVideo: boolean;
+    videoUrl?: string;
 }
 
 export const projectsData = [
   {
     id: nanoid(),
+    shortName: 'hand-engine',
     img: 'hand-engine-focused.png',
     title: 'Hand Engine software',
     subtitle: 'Hand Engine motion capture glove software - StretchSense.',
@@ -34,6 +37,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
+    shortName: 'hand-engine-smart-blend',
     img: 'smart-blend-ui.png',
     title: 'Hand Engine glove calibration UI',
     subtitle: 'Hand Engine motion capture glove software - StretchSense.',
@@ -44,6 +48,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
+    shortName: 'ecommerce-react',
     img: 'ecommerce-react-icestore.png',
     title: 'React ecommerce site (In Progress)',
     subtitle: 'React / Redux / Firebase / Styled Components / Stripe',
@@ -54,6 +59,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
+    shortName: 'gatsby-portfolio',
     img: 'gatsby-portfolio.png',
     title: 'Previous Portfolio',
     subtitle: '',
@@ -64,6 +70,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
+    shortName: 'piko-cafe',
     img: 'piko.png',
     title: 'Piko Cafe',
     subtitle: 'Piko Cafe redesign and development. Student run cafe in the Faculty of Hospitality, Auckland University of Technology.',
@@ -73,6 +80,7 @@ export const projectsData = [
     hasVideo: false
   },  {
     id: nanoid(),
+    shortName: 'forur-seasons',
     img: 'fourseasons.png',
     title: 'Four Seasons Restuarant',
     subtitle: 'Web development for student run restaurant in the Faculty of Hospitality, Auckland University of Technology.',
