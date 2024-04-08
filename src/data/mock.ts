@@ -59,6 +59,17 @@ export const projectsData = [
   },
   {
     id: nanoid(),
+    shortName: 'jsanz-website',
+    img: 'jsanz-website.png',
+    title: 'Japanese Studies Aotearoa New Zealand',
+    subtitle: 'WordPress / Bootstrap',
+    description: 'Website designed and built for JSANZ — an advocacy network for Japanese language education and Japanese studies at tertiary level in Aotearoa New Zealand.',
+    url: 'https://jsanz.org/home/',
+    repo: '',
+    hasVideo: false
+  },
+  {
+    id: nanoid(),
     shortName: 'gatsby-portfolio',
     img: 'gatsby-portfolio.png',
     title: 'Previous Portfolio',
