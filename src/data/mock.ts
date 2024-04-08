@@ -16,7 +16,10 @@ export type Project = {
     img: string;
     title: string;
     subtitle: string;
+    tech: string;
     description: string;
+    paragraphOne: string;
+    paraGraphTwo: string;
     url: string;
     repo: string;
     hasVideo: boolean;
@@ -30,7 +33,10 @@ export const projectsData = [
     img: 'hand-engine-focused.png',
     title: 'Hand Engine software',
     subtitle: 'Hand Engine motion capture glove software - StretchSense.',
+    tech: 'React / TypeScript / Redux / Bootstrap / RxJS / Node.js',
     description: 'UX and UI design and development, Redux state implementation, creation of info panels, features, windows, custom hand implementations (Three.js).',
+    paragraphOne: '',
+    paragraphTwo: '',
     url: 'https://stretchsense.com/',
     repo: '',
     hasVideo: false
@@ -40,8 +46,11 @@ export const projectsData = [
     shortName: 'hand-engine-smart-blend',
     img: 'smart-blend-ui.png',
     title: 'Hand Engine glove calibration UI',
-    subtitle: 'Hand Engine motion capture glove software - StretchSense.',
+    subtitle: 'An example Hand Engine feature including the UI and state that I built.',
+    tech: 'React / TypeScript / Redux / Bootstrap / RxJS / Node.js',
     description: 'UI implementation for calibrating StretchSense Fidelity gloves. The revision of glove is established upon device connection, which switches the UI for calibration. This image shows the manual calibration for an older revision of StretchSense gloves.',
+    paragraphOne: '',
+    paragraphTwo: '',
     url: 'https://floony7.wistia.com/medias/07x2whfb3a',
     repo: '',
     hasVideo: false
@@ -51,8 +60,11 @@ export const projectsData = [
     shortName: 'ecommerce-react',
     img: 'ecommerce-react-icestore.png',
     title: 'React ecommerce site (In Progress)',
-    subtitle: 'React / Redux / Firebase / Styled Components / Stripe',
+    subtitle: 'Fullstack React application.',
+    tech: 'React / Redux / Firebase / Styled Components / Stripe',
     description: 'Building a full ecommerce site with React.',
+    paragraphOne: '',
+    paragraphTwo: '',
     url: '',
     repo: 'https://github.com/Floony7/ecommerce-react',
     hasVideo: false
@@ -62,8 +74,11 @@ export const projectsData = [
     shortName: 'jsanz-website',
     img: 'jsanz-website.png',
     title: 'Japanese Studies Aotearoa New Zealand',
-    subtitle: 'WordPress / Bootstrap',
+    subtitle: 'Website developed with WordPress to give administrators more access and control of their content and increase outreach.',
+    tech: 'WordPress / Bootstrap',
     description: 'Website designed and built for JSANZ — an advocacy network for Japanese language education and Japanese studies at tertiary level in Aotearoa New Zealand.',
+    paragraphOne: '',
+    paragraphTwo: '',
     url: 'https://jsanz.org/home/',
     repo: '',
     hasVideo: false
@@ -73,8 +88,11 @@ export const projectsData = [
     shortName: 'gatsby-portfolio',
     img: 'gatsby-portfolio.png',
     title: 'Previous Portfolio',
-    subtitle: '',
+    subtitle: 'My previous portfolio website',
+    tech: 'Gatsby.js',
     description: 'Built in 2021 using Gatsby and vanilla JavaScript. I used this portfolio to experiment with some CSS background-blend-mode techniques. From a design perspective, I opted for the one page treatment, owing to the simplicity of the content and data.',
+    paragraphOne: '',
+    paragraphTwo: '',
     url: '',
     repo: 'https://github.com/Floony7/gatsby-portfolio',
     hasVideo: false
@@ -85,7 +103,10 @@ export const projectsData = [
     img: 'piko.png',
     title: 'Piko Cafe',
     subtitle: 'Piko Cafe redesign and development. Student run cafe in the Faculty of Hospitality, Auckland University of Technology.',
+    tech: 'HTML5 / CSS3 / jQuery',
     description: '',
+    paragraphOne: '',
+    paragraphTwo: '',
     url: '',
     repo: '',
     hasVideo: false
@@ -95,7 +116,10 @@ export const projectsData = [
     img: 'fourseasons.png',
     title: 'Four Seasons Restuarant',
     subtitle: 'Web development for student run restaurant in the Faculty of Hospitality, Auckland University of Technology.',
+    tech: 'HTML5 / CSS3 / jQuery',
     description: '',
+    paragraphOne: '',
+    paragraphTwo: '',
     url: '',
     repo: '',
     hasVideo: false
