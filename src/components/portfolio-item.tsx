@@ -8,11 +8,15 @@ export default function PortfolioItem(props: { project: Project }) {
     img,
     title,
     subtitle,
+    tech,
     description,
+    paragraphOne,
+    paragraphTwo,
     url,
     repo,
     hasVideo,
     shortName,
+    videoUrl,
   } = props.project;
 
   return (
@@ -30,18 +34,17 @@ export default function PortfolioItem(props: { project: Project }) {
       <div className="prose prose-md text-gray-200 mt-0">
         <h2>{title}</h2>
         <h4>{subtitle}</h4>
-        <p>{description}</p>
-        <span>
-          {
-            <Link
-              href={`/portfolio/${shortName}`}
-              className="hover:text-cyan-300 text-orange-500 transition-all duration-200 no-underline"
-            >
-              Project Info &#10148;
-            </Link>
-          }
-        </span>
-        <br />
+        <h4>{tech}</h4>
+        <p>
+          {description}{" "}
+          <Link
+            href={`/portfolio/${shortName}`}
+            className="hover:text-cyan-300 text-orange-500 transition-all duration-200 no-underline text-nowrap"
+          >
+            Read more &#10148;
+          </Link>
+        </p>
+
         <div className="flex gap-6 justify-center md:justify-normal">
           <div>
             {url !== "" ? (
@@ -50,10 +53,11 @@ export default function PortfolioItem(props: { project: Project }) {
                 target="_blank"
                 className="hover:text-orange-500 text-cyan-300 transition-all duration-200 no-underline"
               >
-                {hasVideo === true ? "View Video" : "View Project"} &#10148;
+                {hasVideo === true ? "View Video" : "View Live Project"}{" "}
+                &#10148;
               </Link>
             ) : (
-              "Not currently live"
+              "Not Currently live"
             )}
           </div>
           <div>

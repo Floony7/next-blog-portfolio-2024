@@ -19,7 +19,7 @@ export type Project = {
     tech: string;
     description: string;
     paragraphOne: string;
-    paraGraphTwo: string;
+    paragraphTwo: string;
     url: string;
     repo: string;
     hasVideo: boolean;
