@@ -35,7 +35,7 @@ export default function PortfolioItem(props: { project: Project }) {
         <h2>{title}</h2>
         <h4>{subtitle}</h4>
         <h4>{tech}</h4>
-        <p>
+        {/* <p>
           {description}{" "}
           <Link
             href={`/portfolio/${shortName}`}
@@ -43,7 +43,7 @@ export default function PortfolioItem(props: { project: Project }) {
           >
             Read more &#10148;
           </Link>
-        </p>
+        </p> */}
 
         <div className="flex gap-6 justify-center md:justify-normal">
           <div>
