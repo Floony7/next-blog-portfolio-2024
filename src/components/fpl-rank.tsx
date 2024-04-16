@@ -9,8 +9,8 @@ const getFplStats = async () => {
   return data;
 };
 
-export default function FplRank() {
-  const { rank, oldRank } = useSetFPLData();
+export default function FplRank({ fplId }: { fplId: number }) {
+  const { rank, oldRank } = useSetFPLData(fplId);
 
   const rankChange = useMemo(() => {
     const percent = (rank / oldRank) * 100;
@@ -38,11 +38,13 @@ export default function FplRank() {
   );
 }
 
-function useSetFPLData() {
+function useSetFPLData(fplId: number) {
   const [ranks, setRanks] = useState({ rank: 0, oldRank: 0 });
 
   const getFplStats = async () => {
-    const result = await fetch("/api/fpl");
+    const result = await fetch(
+      `https://fantasy.premierleague.com/api/entry/${fplId}/`
+    );
     const data = await result.json();
     return data;
   };
