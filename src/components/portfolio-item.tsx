@@ -20,7 +20,7 @@ export default function PortfolioItem(props: { project: Project }) {
   } = props.project;
 
   return (
-    <section key={id} className="grid-1-2 p-4 mt-5 bg-indigo-600 rounded-lg">
+    <section key={id} className="grid-1-2 p-4 mt-5 bg-slate-800 rounded-lg">
       <div>
         <Image
           className="drop-shadow-xl shadow-black mx-auto mb-0"
