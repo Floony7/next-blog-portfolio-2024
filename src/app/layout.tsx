@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
-import { ProfilePic } from "@/components/profile-pic";
-import { Hero } from "@/components/hero";
-import Footer from "@/components/footer";
+import { nunito } from "@/lib/utils";
 
 const plex = IBM_Plex_Sans({ weight: "400", subsets: ["latin"] });
 
@@ -22,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`min-h-screen bg-slate-900 text-white ${plex.className}`}
+        className={`min-h-screen bg-slate-900 text-white ${nunito.className}`}
       >
         <Navbar />
         <main>{children}</main>

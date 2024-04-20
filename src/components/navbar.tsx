@@ -4,7 +4,7 @@ import SocialLinks from "./social-links";
 
 export default function Navbar() {
   return (
-    <nav className="bg-cyan-500 p-4 sticky top-0 z-10">
+    <nav className="navbar-glass p-4 sticky top-0 z-10">
       <div className="site-width flex flex-col lg:flex-row items-center lg:justify-between">
         <h1 className="text-3xl font-bold text-white grid place-content-center mb-2 md:mb-0">
           <Link
