@@ -72,8 +72,8 @@ export const projectsData = [
   {
     id: nanoid(),
     shortName: 'next-pokedex',
-    img: 'pokedex',
-    title: 'Pokedex Pokemon profile search application',
+    img: 'next-pokedex.png',
+    title: 'Pokedex: The Pokemon profile search app',
     subtitle: 'Find Pokemon with my version of the Pokedex.',
     tech: 'Next.js 14 / Radix UI Theme / Tailwind',
     description: 'Reaching into the extensive Pokemon API with Next.js 14 to find Pokemon and view their stats / attributes.',
