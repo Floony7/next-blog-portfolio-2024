@@ -71,6 +71,20 @@ export const projectsData = [
   },
   {
     id: nanoid(),
+    shortName: 'next-pokedex',
+    img: 'pokedex',
+    title: 'Pokedex Pokemon profile search application',
+    subtitle: 'Find Pokemon with my version of the Pokedex.',
+    tech: 'Next.js 14 / Radix UI Theme / Tailwind',
+    description: 'Reaching into the extensive Pokemon API with Next.js 14 to find Pokemon and view their stats / attributes.',
+    paragraphOne: '',
+    paragraphTwo: '',
+    url: 'https://pokedex-unofficial.vercel.app/',
+    repo: 'https://github.com/Floony7/pokemon-directory',
+    hasVideo: false
+  },
+  {
+    id: nanoid(),
     shortName: 'jsanz-website',
     img: 'jsanz-website.png',
     title: 'Japanese Studies Aotearoa New Zealand',
