@@ -1,5 +1,5 @@
 ---
-title: '"Inception" style nesting Next.js Client and Server Components  '
+title: '"Inception" style nesting of Next.js Client and Server Components  '
 date: '2024-04-22'
 tags: ['Next.js', 'React', 'Server Components']
 precis: "How do Next.js Client and Server Components differ? What are they each used for and how can we use them both to generate performant and feature rich applications?"

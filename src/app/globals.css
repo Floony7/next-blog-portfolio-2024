@@ -26,7 +26,11 @@
   --clr-red-dark: hsl(350, 100%, 44%);
   --clr-yellow: hsl(41, 100%, 58%);
   --clr-yellow-dark: hsl(41, 100%, 38%);
-  --clr-background: linear-gradient(to top, #26adad 0%, #330867 100%);
+  --clr-background: linear-gradient(
+    to top,
+    hsl(185, 64%, 41%) 0%,
+    hsl(221, 86%, 22%) 100%
+  );
 }
 
 body {

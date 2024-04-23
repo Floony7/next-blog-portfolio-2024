@@ -6,7 +6,7 @@ precis: "Custom React hooks make life far easier for us devs if we know how to u
 ---
 What is a custom hook in React? There are some misconceptions that need to be cleared up before we can learn how custom hooks can make life so much easier when developing React projects.
 
-First of all, and this is a big one, custom hooks MUST call a React Hook. This is what makes custom hooks special. Normal functions cannot call React Hooks like `useState()` or `useEffect()` for example. Only React components (designated as components by capitalising the first letter of the function name) and custom hooks (designated by the prefix "use").
+First of all, and this is a big one, custom hooks MUST call a React Hook. This is what makes custom hooks special. Normal functions cannot call React Hooks like `useState` or `useEffect` for example. Only React components (designated as components by capitalising the first letter of the function name) and custom hooks (designated by the prefix "use").
 
 So if your helper function does not call a React Hook it should not be prefixed with "use".
 
@@ -16,26 +16,26 @@ In fact, the [React documentation](https://react.dev/learn/reusing-logic-with-cu
 
 ## So when should one use a custom hook?
 
-That said, how do we known when to use custom hooks?
+That said, how do we know when to use custom hooks?
 
 There is no hard and fast answer, but I'll give one shortly. Generally, if a piece of functionality that uses React Hooks is used in more than one location, this is the ideal time to create a hook for it.
 
 **My rule of thumb is:** 
-> If you are using `useEffect()` in your component consider using a custom hook to abstract it out of the component body.
+> If you are using `useEffect` in your component consider using a custom hook to abstract it out of the component body.
 
 Now, I don't expect everyone to agree with me on this one, but hear me out. 
 
-## `useEffect()` overkill
+## `useEffect` overkill
 
 When you look at modern components in React, two things stand out:
-1. The `useEffect()` references don't explicitly tell you their purpose
-2. Multiple `useEffect()` calls that bloat and confuse what the component does
+1. The `useEffect` references don't explicitly tell you their purpose
+2. Multiple `useEffect` calls that bloat and confuse what the component does
 
-With respect to (1), think about every non-`useEffect()` function in your component. They will almost certainly be named appropriately. `handleClick`, `handleDispatchItems`... These event handlers are named according to what they do. Not so with our friend the `useEffect`
+With respect to (1), think about every non-`useEffect` function in your component. They will almost certainly be named appropriately. `handleClick`, `handleDispatchItems`... These event handlers are named according to what they do. Not so with our friend the `useEffect`
 
-Furthermore, when you start stacking `useEffect()` calls in a component, things can get out of hand very quickly. Couple that with the fact that many times a `useEffect()` is simply updating state with `useState()` and now we have more lines of code to deal with.
+Furthermore, when you start stacking `useEffect` calls in a component, things can get out of hand very quickly. Couple that with the fact that many times a `useEffect` is simply updating state with `useState` and now we have more lines of code to deal with.
 
-So let's use custom hooks to separate concerns. Instead of just throwing `useEffect()` and `useState()` hooks everywhere, be a good developer and break this out into it's own named hook function.
+So let's use custom hooks to separate concerns. Instead of just throwing `useEffect` and `useState` hooks everywhere, be a good developer and break this out into it's own named hook function.
 
 Take the following component that uses a fetch call to a Fantasy Premier League API:
 
