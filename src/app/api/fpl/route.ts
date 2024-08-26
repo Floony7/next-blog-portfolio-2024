@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const ENDPOINT = 'https://fantasy.premierleague.com/api/entry/9348/';
+const ENDPOINT = 'https://fantasy.premierleague.com/api/entry/15590/';
 
 export async function GET() {
 const res = await fetch(ENDPOINT);
