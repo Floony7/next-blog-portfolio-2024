@@ -1,14 +1,16 @@
+import { revalidatePath } from "next/cache";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
 async function getFplStats(fplId: number) {
   const res = await fetch(
     `https://fantasy.premierleague.com/api/entry/${fplId}/`,
-    { cache: "no-store" }
+    { cache: "default" }
   );
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
 
+  revalidatePath("/about");
   return res.json();
 }
 

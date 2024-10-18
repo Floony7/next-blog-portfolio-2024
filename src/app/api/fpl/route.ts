@@ -1,9 +1,7 @@
 import { NextResponse } from "next/server";
 
-const ENDPOINT = 'https://fantasy.premierleague.com/api/entry/15590/';
-
-export async function GET() {
-const res = await fetch(ENDPOINT);
+export async function GET(id: number) {
+const res = await fetch(`https://fantasy.premierleague.com/api/entry/${id}`);
 const data = await res.json();
 
 const overallEntry = data.leagues.classic.find((e: { name: string; }) => e.name === "Overall");

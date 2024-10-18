@@ -101,7 +101,7 @@ export default function About() {
                   ))
                 : null}
             </ul>
-            <FplRank2 fplId={9348} />
+            <FplRank2 fplId={15590} />
           </div>
         </aside>
       </article>
