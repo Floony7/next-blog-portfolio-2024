@@ -2,7 +2,10 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
-import html from "remark-html";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import { rehypePrettyCode } from "rehype-pretty-code";
+import rehypeStringify from "rehype-stringify";
 
 export type BlogPost = {
   id: string;
@@ -51,9 +54,19 @@ export async function getPostData(id: string) {
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
+ const processedContent = await remark()
+  .use(remarkGfm)
+  .use(remarkRehype)
+  .use(rehypePrettyCode, {
+    theme: 'one-dark-pro',
+    onVisitLine(node) {
+      if (node.children.length === 0) {
+        node.children = [{ type: 'text', value: ' ' }]
+      }
+    },
+  })
+  .use(rehypeStringify)
+  .process(matterResult.content);
 
   const contentHtml = processedContent.toString();
 
