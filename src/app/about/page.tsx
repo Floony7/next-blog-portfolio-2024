@@ -80,14 +80,18 @@ export default function About() {
             months of it!)
           </p>
           <p>
-            What&apos;s next? More Next.js I hope! This blog is built with
-            Next.js 14 and Tailwind. I enjoyed the development process so much
-            that I&apos;d like to follow the rabbit hole and do this fulltime.
-            Frontend is definitely my &ldquo;wheelhouse&rdquo;, however, my
-            curiosity extends to Node.js, REST API development and GraphQL. Web
-            and software development definitely is a &ldquo;pick your own
-            path&rdquo; deal and I&apos;m happy to be forging my own identity
-            using React, Next.js and the wider ecosystem.
+            This blog is built with Next.js 14 and Tailwind. I enjoyed the
+            development process so much that I went head first down the rabbit
+            hole and now do (mostly) Next.js ecommerce work fulltime for{" "}
+            <a href="https://5874commerce.com/" target="_blank">
+              5874 Commerce
+            </a>
+            . Frontend is definitely my &ldquo;wheelhouse&rdquo;, however, my
+            curiosity extends to Node.js REST API development, which is an itch
+            that I currently scratch with Nest.js. Web and software development
+            definitely is a &ldquo;pick your own path&rdquo; deal and I&apos;m
+            happy to be forging my own identity using React, Next.js and the
+            wider Node.js ecosystem.
           </p>
         </div>
         <aside className="flex flex-col items-center">
