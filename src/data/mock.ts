@@ -6,7 +6,7 @@ export const userData = [
   { name: 'Name', value: 'Fred Lunjevich' },
   { name: 'From', value: 'Auckland, New Zealand' },
   { name: 'Residence', value: 'Birmingham, UK' },
-  { name: 'Currently Learning', value: 'New React hooks, Next.js revalidation + caching, brushing up on GraphQL' },
+  { name: 'Currently Learning', value: 'Next.js site optimisation, building APIs with Nest.js, Advanced TypeScript' },
   { name: 'Likes', value: 'Ice Hockey, Strength Training, Guitar, Conservation, Fantasy Premier League' }
 ] as const;
 
