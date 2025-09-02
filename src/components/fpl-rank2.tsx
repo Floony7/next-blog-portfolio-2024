@@ -36,7 +36,7 @@ export default async function FplRank2({ fplId }: { fplId: number }) {
           My Fantasy Premier League
         </h4>
         <div className="flex md:justify-center font-mono">
-          Rank: {overallEntry.entry_rank} |
+          Rank: {formatNumber(overallEntry.entry_rank)} |
           <span className="mx-1 flex flex-nowrap">
             Change:
             {change < 0 ? (
@@ -56,4 +56,8 @@ export default async function FplRank2({ fplId }: { fplId: number }) {
       <Rank />
     </section>
   );
+}
+
+function formatNumber(num: number): string {
+  return num.toLocaleString("en-US");
 }
