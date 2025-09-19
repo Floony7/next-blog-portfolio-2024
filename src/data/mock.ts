@@ -6,7 +6,7 @@ export const userData = [
   { name: 'Name', value: 'Fred Lunjevich' },
   { name: 'From', value: 'Auckland, New Zealand' },
   { name: 'Residence', value: 'Birmingham, UK' },
-  { name: 'Currently Learning', value: 'Next.js site optimisation, building APIs with Nest.js, Advanced TypeScript' },
+  { name: 'Currently Learning', value: 'Nest.js API dev, Go, data structures and algorithms' },
   { name: 'Likes', value: 'Ice Hockey, Strength Training, Guitar, Conservation, Fantasy Premier League' }
 ] as const;
 
