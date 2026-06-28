@@ -44,7 +44,7 @@ export function getSortedPostsData(limit?: number) {
   });
   // Sort posts by date
   const length = allPostsData.length;
-  return allPostsData.slice(0, limit ?? length).sort((a, b) => (a.date < b.date ? 1 : -1));
+  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, limit ?? length);
 }
 
 export async function getPostData(id: string) {
