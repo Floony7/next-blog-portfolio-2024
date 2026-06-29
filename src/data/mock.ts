@@ -27,6 +27,20 @@ export type Project = {
 }
 
 export const projectsData = [
+    {
+    id: nanoid(),
+    shortName: 'movora',
+    img: 'movora.png',
+    title: 'Movora ecommerce and global site',
+    subtitle: 'Lead Developer - multilanguage ecommerce platform and global websites',
+    tech: 'React / TypeScript / Next.js / GraphQL / Big Commerce',
+    description: 'Led development of a multi-region ecommerce platform serving US, Canada and Europe from a single Next.js codebase. Implemented advanced ecommerce functionality including discount validation, coupon application, persistent cart logic and customer certification-based purchasing controls. Included Vercel management.',
+    paragraphOne: '',
+    paragraphTwo: '',
+    url: 'https://movora.com/',
+    repo: '',
+    hasVideo: false
+  },
   {
     id: nanoid(),
     shortName: 'hand-engine',
@@ -55,20 +69,34 @@ export const projectsData = [
     repo: '',
     hasVideo: false
   },
-  {
+        {
     id: nanoid(),
-    shortName: 'ecommerce-react',
-    img: 'ecommerce-react-icestore.png',
-    title: 'React ecommerce site (In Progress)',
-    subtitle: 'Fullstack React application.',
-    tech: 'React / Redux / Firebase / Styled Components / Stripe',
-    description: 'Building a full ecommerce site with React.',
+    shortName: 'pip-and-kip',
+    img: 'pip-and-kip.png',
+    title: 'With Love from Pip and Kip',
+    subtitle: 'One page promotional site in Astro',
+    tech: 'Astro / TypeScript',
+    description: 'With Love from Pip and Kip primarily promotes an Etsy store, but will become a larger site as the craft business and product lines expand.',
     paragraphOne: '',
     paragraphTwo: '',
-    url: '',
-    repo: 'https://github.com/Floony7/ecommerce-react',
+    url: 'https://pipandkip.com/',
+    repo: '',
     hasVideo: false
   },
+  // {
+  //   id: nanoid(),
+  //   shortName: 'ecommerce-react',
+  //   img: 'ecommerce-react-icestore.png',
+  //   title: 'React ecommerce site (In Progress)',
+  //   subtitle: 'Fullstack React application.',
+  //   tech: 'React / Redux / Firebase / Styled Components / Stripe',
+  //   description: 'Building a full ecommerce site with React.',
+  //   paragraphOne: '',
+  //   paragraphTwo: '',
+  //   url: '',
+  //   repo: 'https://github.com/Floony7/ecommerce-react',
+  //   hasVideo: false
+  // },
   {
     id: nanoid(),
     shortName: 'next-pokedex',
@@ -83,34 +111,34 @@ export const projectsData = [
     repo: 'https://github.com/Floony7/pokemon-directory',
     hasVideo: false
   },
-  {
-    id: nanoid(),
-    shortName: 'jsanz-website',
-    img: 'jsanz-website.png',
-    title: 'Japanese Studies Aotearoa New Zealand',
-    subtitle: 'Website developed with WordPress to give administrators more access and control of their content and increase outreach.',
-    tech: 'WordPress / Bootstrap',
-    description: 'Website designed and built for JSANZ — an advocacy network for Japanese language education and Japanese studies at tertiary level in Aotearoa New Zealand.',
-    paragraphOne: '',
-    paragraphTwo: '',
-    url: 'https://jsanz.org/home/',
-    repo: '',
-    hasVideo: false
-  },
-  {
-    id: nanoid(),
-    shortName: 'gatsby-portfolio',
-    img: 'gatsby-portfolio.png',
-    title: 'Previous Portfolio',
-    subtitle: 'My previous portfolio website',
-    tech: 'Gatsby.js',
-    description: 'Built in 2021 using Gatsby and vanilla JavaScript. I used this portfolio to experiment with some CSS background-blend-mode techniques. From a design perspective, I opted for the one page treatment, owing to the simplicity of the content and data.',
-    paragraphOne: '',
-    paragraphTwo: '',
-    url: '',
-    repo: 'https://github.com/Floony7/gatsby-portfolio',
-    hasVideo: false
-  },
+  // {
+  //   id: nanoid(),
+  //   shortName: 'jsanz-website',
+  //   img: 'jsanz-website.png',
+  //   title: 'Japanese Studies Aotearoa New Zealand',
+  //   subtitle: 'Website developed with WordPress to give administrators more access and control of their content and increase outreach.',
+  //   tech: 'WordPress / Bootstrap',
+  //   description: 'Website designed and built for JSANZ — an advocacy network for Japanese language education and Japanese studies at tertiary level in Aotearoa New Zealand.',
+  //   paragraphOne: '',
+  //   paragraphTwo: '',
+  //   url: 'https://jsanz.org/home/',
+  //   repo: '',
+  //   hasVideo: false
+  // },
+  // {
+  //   id: nanoid(),
+  //   shortName: 'gatsby-portfolio',
+  //   img: 'gatsby-portfolio.png',
+  //   title: 'Previous Portfolio',
+  //   subtitle: 'My previous portfolio website',
+  //   tech: 'Gatsby.js',
+  //   description: 'Built in 2021 using Gatsby and vanilla JavaScript. I used this portfolio to experiment with some CSS background-blend-mode techniques. From a design perspective, I opted for the one page treatment, owing to the simplicity of the content and data.',
+  //   paragraphOne: '',
+  //   paragraphTwo: '',
+  //   url: '',
+  //   repo: 'https://github.com/Floony7/gatsby-portfolio',
+  //   hasVideo: false
+  // },
   {
     id: nanoid(),
     shortName: 'piko-cafe',
@@ -124,9 +152,10 @@ export const projectsData = [
     url: '',
     repo: '',
     hasVideo: false
-  },  {
+  },  
+  {
     id: nanoid(),
-    shortName: 'forur-seasons',
+    shortName: 'four-seasons',
     img: 'fourseasons.png',
     title: 'Four Seasons Restuarant',
     subtitle: 'Web development for student run restaurant in the Faculty of Hospitality, Auckland University of Technology.',
