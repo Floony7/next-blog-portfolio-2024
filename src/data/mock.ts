@@ -80,7 +80,7 @@ export const projectsData = [
     paragraphOne: '',
     paragraphTwo: '',
     url: 'https://pipandkip.com/',
-    repo: '',
+    repo: 'https://github.com/Floony7/pip-and-kip-website',
     hasVideo: false
   },
   // {
