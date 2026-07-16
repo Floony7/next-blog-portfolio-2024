@@ -10,13 +10,9 @@ export default function PortfolioItem(props: { project: Project }) {
     subtitle,
     tech,
     description,
-    paragraphOne,
-    paragraphTwo,
     url,
     repo,
     hasVideo,
-    shortName,
-    videoUrl,
   } = props.project;
 
   return (
@@ -35,15 +31,7 @@ export default function PortfolioItem(props: { project: Project }) {
         <h2>{title}</h2>
         <h4>{subtitle}</h4>
         <h4>{tech}</h4>
-        {/* <p>
-          {description}{" "}
-          <Link
-            href={`/portfolio/${shortName}`}
-            className="hover:text-cyan-300 text-orange-500 transition-all duration-200 no-underline text-nowrap"
-          >
-            Read more &#10148;
-          </Link>
-        </p> */}
+        {description !== "" ? <p>{description}</p> : null}
 
         <div className="flex gap-6 justify-center md:justify-normal">
           <div>

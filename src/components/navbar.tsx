@@ -26,7 +26,7 @@ export default function Navbar() {
             href="/portfolio"
             className="text-white no-underline hover:text-amber-200"
           >
-            Portfolio
+            Work
           </Link>
           <Link
             href="/blog"

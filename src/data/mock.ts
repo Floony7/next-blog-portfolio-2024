@@ -35,6 +35,7 @@ export const projectsData = [
     subtitle: 'Lead Developer - multilanguage ecommerce platform and global websites',
     tech: 'React / TypeScript / Next.js / GraphQL / Big Commerce',
     description: 'Led development of a multi-region ecommerce platform serving US, Canada and Europe from a single Next.js codebase. Implemented advanced ecommerce functionality including discount validation, coupon application, persistent cart logic and customer certification-based purchasing controls. Included Vercel management.',
+    // TODO: Add factual project details: team size, release scope, performance constraints, measurable outcomes and specific ownership boundaries.
     paragraphOne: '',
     paragraphTwo: '',
     url: 'https://movora.com/',
@@ -48,7 +49,8 @@ export const projectsData = [
     title: 'Hand Engine software',
     subtitle: 'Hand Engine motion capture glove software - StretchSense.',
     tech: 'React / TypeScript / Redux / Bootstrap / RxJS / Node.js',
-    description: 'UX and UI design and development, Redux state implementation, creation of info panels, features, windows, custom hand implementations (Three.js).',
+    description: 'Frontend development for a rebuild of StretchSense Hand Engine, including React and TypeScript UI work, Redux state implementation, info panels, feature windows and custom hand implementations with Three.js.',
+    // TODO: Add factual project details: product context, exact frontend ownership, release impact, and any collaboration with backend or hardware teams.
     paragraphOne: '',
     paragraphTwo: '',
     url: 'https://stretchsense.com/',
@@ -63,6 +65,7 @@ export const projectsData = [
     subtitle: 'An example Hand Engine feature including the UI and state that I built.',
     tech: 'React / TypeScript / Redux / Bootstrap / RxJS / Node.js',
     description: 'UI implementation for calibrating StretchSense Fidelity gloves. The revision of glove is established upon device connection, which switches the UI for calibration. This image shows the manual calibration for an older revision of StretchSense gloves.',
+    // TODO: Add factual project details: calibration workflow constraints, state model decisions, user impact and validation approach.
     paragraphOne: '',
     paragraphTwo: '',
     url: 'https://floony7.wistia.com/medias/07x2whfb3a',
@@ -76,7 +79,8 @@ export const projectsData = [
     title: 'With Love from Pip and Kip',
     subtitle: 'One page promotional site in Astro',
     tech: 'Astro / TypeScript',
-    description: 'With Love from Pip and Kip primarily promotes an Etsy store, but will become a larger site as the craft business and product lines expand.',
+    description: 'Small Astro and TypeScript site for an independent craft business, built as a simple promotional layer around an Etsy store with room to expand as product lines grow.',
+    // TODO: Add factual project details if this becomes a stronger product case study: content model, owner workflow, and expansion plans.
     paragraphOne: '',
     paragraphTwo: '',
     url: 'https://pipandkip.com/',
@@ -104,7 +108,8 @@ export const projectsData = [
     title: 'Pokedex: The Pokemon profile search app',
     subtitle: 'Find Pokemon with my version of the Pokedex.',
     tech: 'Next.js 14 / Radix UI Theme / Tailwind',
-    description: 'Reaching into the extensive Pokemon API with Next.js 14 to find Pokemon and view their stats / attributes.',
+    description: 'Next.js 14 experiment using a public API to search Pokemon and render profile data, useful for practising App Router data fetching, UI composition and third-party API integration.',
+    // TODO: Add factual project details: data fetching approach, error states, accessibility considerations and any testing added.
     paragraphOne: '',
     paragraphTwo: '',
     url: 'https://pokedex-unofficial.vercel.app/',
@@ -146,7 +151,8 @@ export const projectsData = [
     title: 'Piko Cafe',
     subtitle: 'Piko Cafe redesign and development. Student run cafe in the Faculty of Hospitality, Auckland University of Technology.',
     tech: 'HTML5 / CSS3 / jQuery',
-    description: '',
+    description: 'Earlier web design and development work for a student-run cafe, included for background rather than as a current technical focus.',
+    // TODO: Add factual project details or consider moving older jQuery projects into a short "early work" section.
     paragraphOne: '',
     paragraphTwo: '',
     url: '',
@@ -160,7 +166,8 @@ export const projectsData = [
     title: 'Four Seasons Restuarant',
     subtitle: 'Web development for student run restaurant in the Faculty of Hospitality, Auckland University of Technology.',
     tech: 'HTML5 / CSS3 / jQuery',
-    description: '',
+    description: 'Earlier HTML, CSS and jQuery site work for a student-run restaurant, useful context for the long-term web background but secondary to current React and Next.js work.',
+    // TODO: Add factual project details or consider moving older jQuery projects into a short "early work" section.
     paragraphOne: '',
     paragraphTwo: '',
     url: '',

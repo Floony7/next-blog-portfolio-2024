@@ -5,47 +5,42 @@ import { userData } from "@/data/mock";
 export default function About() {
   return (
     <section className="site-width p-6 mt-10 mb-6">
-      <h1 className="page-title">How I got here...</h1>
+      <h1 className="page-title">About Fred</h1>
       <article className="prose prose-xl max-w-none text-gray-200 grid-2-1">
         <div>
           <p>
-            My journey into web and software development was not what you&apos;d
-            call &ldquo;typical&rdquo;. HTML was introduced to me during my
-            bachelor&apos;s degree in Communication Studies at Auckland
-            University of Technology (AUT), circa 2000.
+            I&apos;m a senior frontend engineer focused on React, TypeScript
+            and Next.js. Most of my recent work has been in commercial
+            ecommerce and product teams, where the frontend sits close to APIs,
+            CMS platforms, customer data, search, recommendations and release
+            workflows.
           </p>
           <p>
-            I became Web Co-ordinator in the Humanities faculty at the same
-            university in 2011, which gave me some web development
-            opportunities, back when jQuery was all the rage and web layouts
-            were a bunch of floating and absolute positioned divs.
+            Frontend is still my strongest lane. I enjoy the details that make
+            interfaces reliable in production: clear component boundaries,
+            accessible HTML, state management, performance, API integration,
+            code review and the practical trade-offs needed to ship maintainable
+            product work.
           </p>
           <p>
-            Each year AUT would pay for me to head down to Wellington for the
-            annual&nbsp;{" "}
-            <a
-              href="https://www.webstock.org.nz/"
-              target="_blank"
-              className="prose-anchor"
-            >
-              Webstock
-            </a>
-            &nbsp; conference. Meeting highly respected people in the web
-            industry inspired me to learn CSS to a high level and I promptly
-            began using my new found knowledge to make WordPress websites for
-            local businesses and AUT academics.
+            I&apos;m also deliberately growing into more product-focused
+            full-stack engineering. That means spending more time with Node.js,
+            server-side TypeScript, API design, authentication, databases,
+            testing and observability rather than treating the backend as a
+            black box.
+          </p>
+          <h3>How I got here</h3>
+          <p>
+            My route into software was not especially linear. I first worked
+            with HTML during my Communication Studies degree at Auckland
+            University of Technology, then later became Web Co-ordinator in the
+            Humanities faculty. That role gave me room to build WordPress and
+            jQuery-era sites, sharpen my CSS, and learn how real people manage
+            real content.
           </p>
           <p>
-            Fast forward to 2017. Not satisfied with my marketing career
-            direction, I made the jump to learning the programming side of the
-            web (JavaScript and React). To be honest, I&apos;m not sure how I
-            survived all these years without programming skills!
-          </p>
-          <h3>My big break</h3>
-          <p>
-            When the 2020 Covid lockdowns arrived in New Zealand, I was in full
-            React and frontend immersion mode. Later that year, I joined motion
-            capture tech company&nbsp;
+            In 2017 I shifted hard into JavaScript and React. A few years later
+            I joined motion capture tech company&nbsp;
             <a
               href="https://stretchsense.com/"
               target="_blank"
@@ -53,45 +48,19 @@ export default function About() {
             >
               StretchSense
             </a>
-            &nbsp; as a Digital Marketing assistant.
+            &nbsp; and moved from marketing into the Software Team, taking on
+            frontend responsibilities for the Hand Engine software rebuild.
           </p>
           <p>
-            Fortunately, I was able to move out of that role a year later and
-            into the Software Team. It seems the Software Lead saw enough
-            promise in my lockdown React &ldquo;doodles&rdquo; that he entrusted
-            me with the frontend duties in a rebuild of the company&apos;s
-            flagship software &#8212; Hand Engine. This was the
-            &ldquo;lucky&rdquo; break I was looking for.
-          </p>
-          <blockquote className="text-cyan-200 text-2xl">
-            &ldquo;Luck is when opportunity and preparedness meet&rdquo;
-          </blockquote>
-          <h3>Shipping off to the UK</h3>
-          <p>
-            2022 saw my wife and I finally realise our dream of moving to the
-            UK. My wife grew up in Birmingham (she was in the room when Duran
-            Duran played their first gig!)
-          </p>
-          <p>
-            For me, it was a big step moving away from all my friends and
-            family, but I was and am excited about living on this side of the
-            world. I have been fortunate to get a developer role, thrive in it
-            and work the entire time it took for us to move into a house (all 9
-            months of it!)
-          </p>
-          <p>
-            This blog is built with Next.js 14 and Tailwind. I enjoyed the
-            development process so much that I went head first down the rabbit
-            hole and now do (mostly) Next.js ecommerce work fulltime for{" "}
+            Since moving to the UK in 2022, I&apos;ve worked mainly on Next.js
+            ecommerce at{" "}
             <a href="https://5874commerce.com/" target="_blank">
               5874 Commerce
             </a>
-            . Frontend is definitely my &ldquo;wheelhouse&rdquo;, however, my
-            curiosity extends to Node.js REST API development, which is an itch
-            that I currently scratch with Nest.js. Web and software development
-            definitely is a &ldquo;pick your own path&rdquo; deal and I&apos;m
-            happy to be forging my own identity using React, Next.js and the
-            wider Node.js ecosystem.
+            , including multi-region storefronts, BigCommerce integrations and
+            headless CMS work. The next step is owning more of the product
+            layer around those interfaces: the APIs, data models and backend
+            decisions that shape what a product can become.
           </p>
         </div>
         <aside className="flex flex-col items-center">
