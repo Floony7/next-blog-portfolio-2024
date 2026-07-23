@@ -9,11 +9,10 @@ export default function About() {
       <article className="prose prose-xl max-w-none text-gray-200 grid-2-1">
         <div>
           <p>
-            I&apos;m a senior frontend engineer focused on React, TypeScript
-            and Next.js. Most of my recent work has been in commercial
-            ecommerce and product teams, where the frontend sits close to APIs,
-            CMS platforms, customer data, search, recommendations and release
-            workflows.
+            I&apos;m a senior frontend engineer focused on React, TypeScript and
+            Next.js. Most of my recent work has been in commercial ecommerce and
+            product teams, where the frontend sits close to APIs, CMS platforms,
+            customer data, search, recommendations and release workflows.
           </p>
           <p>
             Frontend is still my strongest lane. I enjoy the details that make
@@ -58,9 +57,9 @@ export default function About() {
               5874 Commerce
             </a>
             , including multi-region storefronts, BigCommerce integrations and
-            headless CMS work. The next step is owning more of the product
-            layer around those interfaces: the APIs, data models and backend
-            decisions that shape what a product can become.
+            headless CMS work. The next step is owning more of the product layer
+            around those interfaces: the APIs, data models and backend decisions
+            that shape what a product can become.
           </p>
         </div>
         <aside className="flex flex-col items-center">
@@ -74,7 +73,7 @@ export default function About() {
                   ))
                 : null}
             </ul>
-            <FplRank2 fplId={23632} />
+            <FplRank2 fplId={241312} />
           </div>
         </aside>
       </article>
