@@ -13,7 +13,8 @@ Why do I tell you all this? I say it, not to blow one's own trumpet (there's not
 
 Revolutionary, but also 100% necessary. If you're outsourcing your brain and thinking to AI then you're diminishing the power of your brain. How exactly? By reducing your ability to think, reason and problem solve.
 
-Consider for a moment the analogy of translating a text into say, Icelandic. You pass it through your favourite LLM and get a response. You yourself don't speak Icelandic, so how do you know the intended meaning is mapped over from English as accurately as possible? There are all kinds of nuances we individually bring to the English language, so the AI version might be strictly correct, but it won't be exactly what you were trying to communicate.
+Consider for a moment the analogy of translati
+ng a text into say, Icelandic. You pass it through your favourite LLM and get a response. You yourself don't speak Icelandic, so how do you know the intended meaning is mapped over from English as accurately as possible? There are all kinds of nuances we individually bring to the English language, so the AI version might be strictly correct, but it won't be exactly what you were trying to communicate.
 
 The same is true of development. You outsource everything to AI and get some code in response. Now, if you then go on to study it, learn what the code is trying to do and contrast it with accepted patterns, then bravo, you used AI to get better. If however you just accepted everything verbatim, then you run the double of risk of (a) not learning anything and (b) committing bad code. And believe me, LLMs can and often do spit out some bad code.
 
