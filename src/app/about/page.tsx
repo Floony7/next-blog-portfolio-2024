@@ -6,18 +6,20 @@ export default function About() {
   return (
     <section className="site-width mb-16 mt-14">
       <p className="text-sm uppercase tracking-[0.22em] text-[var(--clr-muted)]">
-        About Fred
+        A bit about Fred
       </p>
       <h1 className="mt-3 text-5xl font-semibold sm:text-7xl">
-        Frontend depth, fuller product ownership.
+        From disillusioned digital marketer to{" "}
+        <span className="gradient-text">thriving developer</span>
       </h1>
       <article className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.48fr)] lg:items-start">
         <div className="prose prose-xl max-w-none text-[var(--clr-muted)]">
           <p>
-            I&apos;m a senior frontend engineer focused on React, TypeScript and
-            Next.js. Most of my recent work has been in commercial ecommerce and
-            product teams, where the frontend sits close to APIs, CMS platforms,
-            customer data, search, recommendations and release workflows.
+            I&apos;m a senior frontend engineer specialising in React,
+            TypeScript and Next.js, with recent experience across ecommerce and
+            product teams. My work often sits where the interface meets the
+            wider product system: APIs, CMS platforms, customer data, search,
+            recommendations and release workflows.
           </p>
           <p>
             Frontend is still my strongest lane. I enjoy the details that make
@@ -28,10 +30,11 @@ export default function About() {
           </p>
           <p>
             I&apos;m also deliberately growing into more product-focused
-            full-stack engineering. That means spending more time with Node.js,
-            server-side TypeScript, API design, authentication, databases,
-            testing and observability rather than treating the backend as a
-            black box.
+            full-stack engineering, spending more time with Node.js, server-side
+            TypeScript, API design, authentication, databases, micro-services
+            and testing. I&apos;m interested in owning more of the product layer
+            around the interface, including the backend decisions and data
+            models that shape what a product can become.
           </p>
           <h3>How I got here</h3>
           <p>
@@ -43,7 +46,7 @@ export default function About() {
             real content.
           </p>
           <p>
-            In 2017 I shifted hard into JavaScript and React. A few years later
+            In 2017, I dived deeper into JavaScript and React. A few years later
             I joined motion capture tech company&nbsp;
             <a
               href="https://stretchsense.com/"
@@ -62,9 +65,7 @@ export default function About() {
               5874 Commerce
             </a>
             , including multi-region storefronts, BigCommerce integrations and
-            headless CMS work. The next step is owning more of the product layer
-            around those interfaces: the APIs, data models and backend decisions
-            that shape what a product can become.
+            headless CMS implementations.
           </p>
         </div>
         <aside className="flex flex-col items-center">

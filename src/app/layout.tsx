@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import { poppins } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={`aurora-shell min-h-screen ${poppins.className}`}>
+      <body
+        className={`aurora-shell flex min-h-screen flex-col ${poppins.className}`}
+      >
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -28,8 +31,8 @@ export default function RootLayout({
           }}
         />
         <Navbar />
-        <main>{children}</main>
-        {/* <Footer /> */}
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

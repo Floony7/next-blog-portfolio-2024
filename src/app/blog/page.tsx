@@ -11,17 +11,17 @@ export default function Blog() {
           </p>
           <h1 className="mt-3 text-5xl font-semibold sm:text-7xl">Writing</h1>
           <p className="mt-5 max-w-xl text-xl leading-relaxed text-[var(--clr-muted)]">
-            Practical notes on frontend engineering, product trade-offs, AI and
-            the bits of web development that are worth thinking about twice.
+            Practical notes, observations, insights and the odd complaint from
+            my journey as a software engineer.
           </p>
           <div className="mt-7 flex flex-wrap gap-2">
-            {tags.length > 0 ? (
-              tags.map((tag) => (
-                <span className="soft-tag" key={tag}>
-                  {tag}
-                </span>
-              ))
-            ) : null}
+            {tags.length > 0
+              ? tags.map((tag) => (
+                  <span className="soft-tag" key={tag}>
+                    {tag}
+                  </span>
+                ))
+              : null}
           </div>
         </aside>
         <div className="glass-panel rounded-[1.75rem] p-5 sm:p-7">

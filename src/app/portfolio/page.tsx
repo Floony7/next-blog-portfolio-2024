@@ -12,14 +12,12 @@ export default function Portfolio() {
         <p className="mt-5 max-w-3xl text-xl leading-relaxed text-[var(--clr-muted)]">
           Selected frontend and product engineering work across React,
           TypeScript, Next.js, ecommerce, CMS integrations and interface-heavy
-          software. The strongest examples lead with production frontend depth;
-          newer work shows the direction I&apos;m taking into fuller product and
-          backend ownership.
+          software.
         </p>
         <div className="mt-10">
-        {projectsData.map((project) => (
-          <PortfolioItem key={project.id} project={project} />
-        ))}
+          {projectsData.map((project) => (
+            <PortfolioItem key={project.id} project={project} />
+          ))}
         </div>
       </section>
     </section>
