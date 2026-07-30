@@ -12,7 +12,7 @@ export default function SelectedWork() {
             Selected work
           </p>
           <h2 className="mt-2 text-4xl font-semibold sm:text-5xl">
-            Proof over promises.
+            Recent Projects
           </h2>
         </div>
         <Link className="fancy-anchor" href="/portfolio">

@@ -8,7 +8,9 @@ export default function Portfolio() {
         <p className="text-sm uppercase tracking-[0.22em] text-[var(--clr-muted)]">
           Selected work
         </p>
-        <h1 className="mt-3 text-5xl font-semibold sm:text-7xl">Work</h1>
+        <h1 className="mt-3 text-5xl font-semibold sm:text-7xl">
+          Work and Projects
+        </h1>
         <p className="mt-5 max-w-3xl text-xl leading-relaxed text-[var(--clr-muted)]">
           Selected frontend and product engineering work across React,
           TypeScript, Next.js, ecommerce, CMS integrations and interface-heavy

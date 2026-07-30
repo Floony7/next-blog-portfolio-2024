@@ -11,10 +11,10 @@ export const userData = [
 ] as const;
 
 export const areas = [
-            ["Frontend depth", "React, TypeScript, Next.js and accessible UI systems."],
-            ["Commercial context", "Ecommerce, CMS integrations, catalogues and release workflows."],
-            ["Product ownership", "Practical trade-offs from requirements through production support."],
-            ["Full-stack direction", "Node.js, APIs, auth, databases and backend architecture."],
+            ["Frontend depth", "React, TypeScript, Next.js, Vue.js and accessibility."],
+            ["Commercial context", "Ecommerce, CMS integrations and release workflows."],
+            ["Soft skills", "Team player, excellent communicator, quick learner, problem solving."],
+            ["Full-stack direction", "Node.js, Go, APIs, auth, databases and backend architecture."],
           ];
 
 export const technicalExpertise = [
@@ -63,7 +63,7 @@ export const projectsData = [
     shortName: 'hand-engine',
     img: 'hand-engine-focused.png',
     title: 'Hand Engine software',
-    subtitle: 'Hand Engine motion capture glove software - StretchSense.',
+    subtitle: 'Hand Engine motion capture glove software - StretchSense',
     tech: 'React / TypeScript / Redux / Bootstrap / RxJS / Node.js',
     description: 'Frontend development for a rebuild of StretchSense Hand Engine, including React and TypeScript UI work, Redux state implementation, info panels, feature windows and custom hand implementations with Three.js.',
     // TODO: Add factual project details: product context, exact frontend ownership, release impact, and any collaboration with backend or hardware teams.
@@ -78,7 +78,7 @@ export const projectsData = [
     shortName: 'hand-engine-smart-blend',
     img: 'smart-blend-ui.png',
     title: 'Hand Engine glove calibration UI',
-    subtitle: 'An example Hand Engine feature including the UI and state that I built.',
+    subtitle: 'Hand Engine glove calibration feature.',
     tech: 'React / TypeScript / Redux / Bootstrap / RxJS / Node.js',
     description: 'UI implementation for calibrating StretchSense Fidelity gloves. The revision of glove is established upon device connection, which switches the UI for calibration. This image shows the manual calibration for an older revision of StretchSense gloves.',
     // TODO: Add factual project details: calibration workflow constraints, state model decisions, user impact and validation approach.
