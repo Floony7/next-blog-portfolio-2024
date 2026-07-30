@@ -55,12 +55,16 @@ export default function About() {
             >
               StretchSense
             </a>
-            &nbsp; and moved from marketing into the Software Team, taking on
-            frontend responsibilities for the Hand Engine software rebuild.
+            . As a digital marketing assistant, I was always enviously looking
+            over at the Software Team as they did all these cool things with
+            motion capture gloves. I desperately wanted to be a developer, and
+            after a year at the company, the opportunity to take on a React
+            frontend role landed on my desk. I was tasked with leading the Hand
+            Engine software rebuild both in NZ and the UK.
           </p>
           <p>
-            Since moving to the UK in 2022, I&apos;ve worked mainly on Next.js
-            ecommerce at{" "}
+            Since moving to Birmingham in 2022, I&apos;ve worked mainly on
+            Next.js ecommerce at{" "}
             <a href="https://5874commerce.com/" target="_blank">
               5874 Commerce
             </a>

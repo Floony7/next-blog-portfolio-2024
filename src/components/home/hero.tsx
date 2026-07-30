@@ -22,9 +22,9 @@ export const Hero = () => {
               ecommerce, headless CMS and API-heavy product work.
             </p>
             <p className="max-w-2xl text-lg leading-relaxed text-[var(--clr-muted)]">
-              I&apos;m expanding deeper into Node.js, API design and backend
-              architecture so I can own more of the product from interface to
-              release.
+              I&apos;m working on expanding my expertise withNode.js, API design
+              and backend architecture so I can own more of the product from
+              interface to release.
             </p>
           </div>
 
