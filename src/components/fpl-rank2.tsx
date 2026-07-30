@@ -9,7 +9,7 @@ export default async function FplRank2({ fplId }: { fplId: number }) {
 
   if (!overallEntry) {
     return (
-      <section className="bg-gradient-to-r from-cyan-500 to-green-600 text-white p-3 flex justify-center">
+      <section className="flex justify-center border-t border-[var(--clr-border)] p-3 text-[var(--clr-muted)]">
         <h4 className="m-0 p-0 flex justify-center">
           Fantasy Premier League rank unavailable
         </h4>
@@ -28,9 +28,9 @@ export default async function FplRank2({ fplId }: { fplId: number }) {
   const change = rankChange();
 
   return (
-    <section className="bg-gradient-to-r from-cyan-500 to-green-600 text-white p-3 flex justify-center">
+    <section className="flex justify-center border-t border-[var(--clr-border)] p-3 text-[var(--clr-muted)]">
       <div>
-        <h4 className="m-0 p-0 flex justify-center">
+        <h4 className="m-0 flex justify-center p-0 text-[var(--clr-text)]">
           My Fantasy Premier League
         </h4>
         <div className="flex md:justify-center font-mono">

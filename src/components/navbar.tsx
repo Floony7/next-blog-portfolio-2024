@@ -1,46 +1,49 @@
 import Link from "next/link";
 import Image from "next/image";
 import SocialLinks from "./social-links";
+import { ThemeToggle } from "./theme-toggle";
 
 export default function Navbar() {
   return (
-    <nav className="navbar-glass p-4 sticky top-0 z-10">
-      <div className="site-width flex flex-col lg:flex-row items-center lg:justify-between">
-        <h1 className="text-3xl font-bold text-white grid place-content-center mb-2 md:mb-0">
+    <nav className="navbar-glass sticky top-0 z-10">
+      <div className="site-width flex flex-col gap-4 py-4 lg:flex-row lg:items-center lg:justify-between">
+        <h1 className="grid place-content-center text-2xl font-bold lg:text-3xl">
           <Link
             href="/"
-            className="text-white hover:text-amber-200 no-underline"
+            className="flex items-center gap-3 text-[var(--clr-text)] no-underline transition hover:text-[var(--clr-sky-accent)]"
           >
             <Image
-              className="drop-shadow-xl shadow-black mx-auto"
+              className="mx-auto drop-shadow-xl"
               src="/images/floony-initials-logo.svg"
               alt="Fred Lunjevich"
-              width="80"
-              height="80"
+              width="54"
+              height="54"
               priority={true}
             />
+            <span className="hidden sm:inline">Fred Lunjevich</span>
           </Link>
         </h1>
-        <section className="flex justify-evenly lg:justify-between min-w-96 mt-1 text-xl">
+        <section className="flex flex-wrap items-center justify-center gap-5 text-lg lg:justify-end">
           <Link
             href="/portfolio"
-            className="text-white no-underline hover:text-amber-200"
+            className="text-[var(--clr-muted)] no-underline transition hover:text-[var(--clr-sky-accent)]"
           >
             Work
           </Link>
           <Link
             href="/blog"
-            className="text-white no-underline hover:text-amber-200"
+            className="text-[var(--clr-muted)] no-underline transition hover:text-[var(--clr-sky-accent)]"
           >
             Blog
           </Link>
           <Link
             href="/about"
-            className="text-white no-underline hover:text-amber-200"
+            className="text-[var(--clr-muted)] no-underline transition hover:text-[var(--clr-sky-accent)]"
           >
             About
           </Link>
           <SocialLinks iconSize={2} />
+          <ThemeToggle />
         </section>
       </div>
     </nav>

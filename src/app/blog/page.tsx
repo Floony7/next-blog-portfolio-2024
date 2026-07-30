@@ -1,36 +1,32 @@
 import { Posts } from "@/components/posts";
 import { tags } from "@/data/mock";
-import { getSortedPostsData } from "@/lib/posts";
 
 export default function Blog() {
-  // Todo: Dynamically source posts based on tag or get all posts
-  // May need to use context to serve this data
-  const posts = getSortedPostsData();
-
   return (
-    <section className="site-width p-6 mt-10 mb-6">
-      <h1 className="page-title">Dev Blog</h1>
-      <section className="grid-2-1">
-        <Posts />
-        <aside className="bg-slate-800 p-4 rounded-xl prose prose-md text-gray-200">
-          <h2 className="text-4xl font-bold dark:text-white/90 font-mono">
-            Topics
-          </h2>
-          <p>
-            In a former life, I was a writer! A writer writes, so here&apos;s my
-            contribution to humanity (well, at least the dev world).
+    <section className="site-width mb-16 mt-14">
+      <section className="grid gap-10 lg:grid-cols-[0.72fr_1fr] lg:items-start">
+        <aside className="lg:sticky lg:top-32">
+          <p className="text-sm uppercase tracking-[0.22em] text-[var(--clr-muted)]">
+            Dev blog
           </p>
-          <p>Topics I like to rant about:</p>
-          <ul>
-            {tags.length > 0 ? tags.map((t) => <li key={t}>{t}</li>) : null}
-          </ul>
-          <p>
-            I plan to make the blog filter based on topic (tag) once this blog
-            is large enough.
+          <h1 className="mt-3 text-5xl font-semibold sm:text-7xl">Writing</h1>
+          <p className="mt-5 max-w-xl text-xl leading-relaxed text-[var(--clr-muted)]">
+            Practical notes on frontend engineering, product trade-offs, AI and
+            the bits of web development that are worth thinking about twice.
           </p>
-          {/* <PostList posts={posts} /> */}
-          {/* <TagSearch /> */}
+          <div className="mt-7 flex flex-wrap gap-2">
+            {tags.length > 0 ? (
+              tags.map((tag) => (
+                <span className="soft-tag" key={tag}>
+                  {tag}
+                </span>
+              ))
+            ) : null}
+          </div>
         </aside>
+        <div className="glass-panel rounded-[1.75rem] p-5 sm:p-7">
+          <Posts />
+        </div>
       </section>
     </section>
   );

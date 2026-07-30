@@ -44,28 +44,32 @@ export default async function Post({ params }: { params: { postId: string } }) {
   const published = getFormattedDate(date);
 
   return (
-    <section className="site-width p-6 mt-10 mb-6 prose prose-xl prose-strong:text-gray-200 max-w-none">
-      <h1 className="text-4xl text-white mt-4 mb-0">{title}</h1>
-      <p className="uppercase text-sm text-teal-500">{published}</p>
-      <p className="text-base">
-        <strong>Tags:&nbsp;</strong>
+    <section className="site-width mb-16 mt-14">
+      <header className="glass-panel rounded-[1.75rem] p-6 sm:p-10">
+        <p className="text-sm uppercase tracking-[0.22em] text-[var(--clr-muted)]">
+          {published}
+        </p>
+        <h1 className="mt-3 max-w-4xl text-4xl font-semibold sm:text-6xl">
+          {title}
+        </h1>
+      <div className="mt-5 flex flex-wrap gap-2">
         {tags
           ? tags.map((tag, i) => (
-              <button
+              <span
                 key={i}
-                className="rounded-full bg-cyan-700 text-white px-2 py-1 mx-1"
-                disabled={true}
+                className="soft-tag"
               >
                 {tag}
-              </button>
+              </span>
             ))
           : null}
-      </p>
-      <article className="text-gray-200 text-base">
+        </div>
+      </header>
+      <article className="prose prose-xl prose-strong:text-[var(--clr-text)] mt-10 max-w-none text-[var(--clr-muted)]">
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
         <p>
           <Link
-            className="uppercase text-white underline-offset-4 font-semibold"
+            className="font-semibold uppercase tracking-[0.18em] text-[var(--clr-teal-accent)] underline-offset-4 hover:text-[var(--clr-sky-accent)]"
             href="/blog"
           >
             ← Return to blog

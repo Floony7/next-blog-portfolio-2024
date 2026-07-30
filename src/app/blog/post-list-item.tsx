@@ -10,11 +10,16 @@ export default function PostListItem({ post }: Props) {
   const { id, title, date, precis } = post;
   const formattedDate = getFormattedDate(date);
   return (
-    <li className="text-xl text-white/90">
-      <Link className="hover:text-cyan-400 font-mono" href={`/posts/${id}`}>
+    <li className="border-t border-[var(--clr-border)] py-4 text-xl text-[var(--clr-text)] first:border-t-0">
+      <Link
+        className="font-semibold no-underline transition hover:text-[var(--clr-sky-accent)]"
+        href={`/posts/${id}`}
+      >
         {title}
       </Link>
-      <p className="text-sm text-teal-500 my-1">{formattedDate}</p>
+      <p className="my-1 text-sm uppercase tracking-[0.18em] text-[var(--clr-muted)]">
+        {formattedDate}
+      </p>
     </li>
   );
 }

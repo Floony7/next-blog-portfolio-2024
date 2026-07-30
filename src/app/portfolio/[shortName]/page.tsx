@@ -1,4 +1,5 @@
 import { projectsData } from "@/data/mock";
+
 export default async function ProjectPage({
   params,
 }: {
@@ -6,14 +7,21 @@ export default async function ProjectPage({
 }) {
   const { shortName } = params;
   const project = projectsData.find((p) => p.shortName === shortName);
-  console.log(params);
+
   return (
-    <section className="site-width p-6 mt-10 mb-6">
-      <article className="prose prose-xl max-w-none text-gray-200">
+    <section className="site-width mb-16 mt-14">
+      <article className="glass-panel max-w-none rounded-[1.75rem] p-6 sm:p-10">
         {project ? (
           <div>
-            <h1 className="text-5xl">{project?.title}</h1>
-            {project ? <p>{project.description}</p> : <p>No such project</p>}
+            <p className="text-sm uppercase tracking-[0.22em] text-[var(--clr-muted)]">
+              Project notes
+            </p>
+            <h1 className="mt-3 text-4xl font-semibold sm:text-6xl">
+              {project?.title}
+            </h1>
+            <p className="mt-5 max-w-3xl text-xl leading-relaxed text-[var(--clr-muted)]">
+              {project.description}
+            </p>
           </div>
         ) : (
           <h1>No such project</h1>

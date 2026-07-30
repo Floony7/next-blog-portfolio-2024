@@ -11,20 +11,33 @@ export default function ListItem({ post, displayPrecis }: Props) {
   const { id, title, date, precis } = post;
   const formattedDate = getFormattedDate(date);
   return (
-    <li className="my-6 text-2xl text-white/90 bg-slate-800 p-3 rounded-md">
-      <Link className="hover:text-cyan-400 font-semibold" href={`/posts/${id}`}>
-        {title}
-      </Link>
-      <p className="text-sm uppercase text-teal-500 my-1">{formattedDate}</p>
-      {displayPrecis ? <p className="text-base">{precis}</p> : null}
-      <p>
-        <Link
-          className="hover:text-orange-500 text-cyan-400 text-sm transition-all duration-200"
-          href={`/posts/${id}`}
-        >
-          Read More &#10148;
-        </Link>
-      </p>
+    <li className="group border-t border-[var(--clr-border)] py-6 text-[var(--clr-text)] transition first:border-t-0">
+      <article className="grid gap-3 sm:grid-cols-[8rem_1fr] sm:gap-8">
+        <p className="text-sm uppercase tracking-[0.18em] text-[var(--clr-muted)]">
+          {formattedDate}
+        </p>
+        <div className="space-y-3">
+          <Link
+            className="text-2xl font-semibold no-underline transition group-hover:text-[var(--clr-sky-accent)]"
+            href={`/posts/${id}`}
+          >
+            {title}
+          </Link>
+          {displayPrecis ? (
+            <p className="max-w-2xl text-base leading-relaxed text-[var(--clr-muted)]">
+              {precis}
+            </p>
+          ) : null}
+          <p>
+            <Link
+              className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--clr-teal-accent)] transition hover:text-[var(--clr-pink-accent)]"
+              href={`/posts/${id}`}
+            >
+              Read article
+            </Link>
+          </p>
+        </div>
+      </article>
     </li>
   );
 }

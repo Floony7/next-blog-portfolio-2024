@@ -1,10 +1,11 @@
-import { Project, projectsData } from "@/data/mock";
+import { Project } from "@/data/mock";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function PortfolioItem(props: { project: Project }) {
   const {
     id,
+    shortName,
     img,
     title,
     subtitle,
@@ -14,53 +15,80 @@ export default function PortfolioItem(props: { project: Project }) {
     repo,
     hasVideo,
   } = props.project;
+  const techItems = tech.split("/").map((item) => item.trim());
 
   return (
-    <section key={id} className="grid-1-2 p-4 mt-5 bg-slate-800 rounded-lg">
-      <div>
+    <article
+      key={id}
+      className="group grid gap-8 border-t border-[var(--clr-border)] py-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center"
+    >
+      <Link
+        href={`/portfolio/${shortName}`}
+        className="relative block overflow-hidden rounded-[1.75rem] border border-[var(--clr-border)] bg-[var(--clr-surface)] p-3 transition duration-300 group-hover:-translate-y-1 group-hover:border-[var(--clr-sky-accent)]"
+      >
         <Image
-          className="drop-shadow-xl shadow-black mx-auto mb-0"
+          className="aspect-[4/3] w-full rounded-[1.25rem] object-cover shadow-2xl shadow-slate-950/20"
           src={`/images/portfolio/${img}`}
-          alt="Fred Lunjevich"
+          alt={title}
           width="600"
           height="400"
           priority={true}
         />
-      </div>
-      <div className="prose prose-md text-gray-200 mt-0">
-        <h2>{title}</h2>
-        <h4>{subtitle}</h4>
-        <h4>{tech}</h4>
-        {description !== "" ? <p>{description}</p> : null}
+        <span className="absolute right-6 top-6 rounded-full bg-[var(--clr-teal-accent)] px-3 py-1 text-sm font-semibold text-slate-950">
+          Work
+        </span>
+      </Link>
+      <div className="space-y-5">
+        <div className="space-y-3">
+          <p className="text-sm uppercase tracking-[0.18em] text-[var(--clr-muted)]">
+            {subtitle}
+          </p>
+          <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
+            {title}
+          </h2>
+        </div>
+        <ul className="flex list-none flex-wrap gap-2 p-0">
+          {techItems.map((item) => (
+            <li key={item} className="soft-tag">
+              {item}
+            </li>
+          ))}
+        </ul>
+        {description !== "" ? (
+          <p className="max-w-2xl leading-relaxed text-[var(--clr-muted)]">
+            {description}
+          </p>
+        ) : null}
 
-        <div className="flex gap-6 justify-center md:justify-normal">
-          <div>
-            {url !== "" ? (
-              <Link
-                href={url}
-                target="_blank"
-                className="hover:text-orange-500 text-cyan-300 transition-all duration-200 no-underline"
-              >
-                {hasVideo === true ? "View Video" : "View Live Project"}{" "}
-                &#10148;
-              </Link>
-            ) : (
-              "Not Currently live"
-            )}
-          </div>
-          <div>
-            {repo !== "" ? (
-              <Link
-                href={repo}
-                target="_blank"
-                className="hover:text-cyan-300 text-orange-500 transition-all duration-200 no-underline"
-              >
-                GitHub Repo &#10148;
-              </Link>
-            ) : null}
-          </div>
+        <div className="flex flex-wrap gap-4">
+          <Link
+            href={`/portfolio/${shortName}`}
+            className="font-semibold text-[var(--clr-teal-accent)] no-underline transition hover:text-[var(--clr-sky-accent)]"
+          >
+            View project notes
+          </Link>
+          {url !== "" ? (
+            <Link
+              href={url}
+              target="_blank"
+              className="font-semibold text-[var(--clr-sky-accent)] no-underline transition hover:text-[var(--clr-pink-accent)]"
+            >
+              {hasVideo === true ? "View video" : "View live project"}
+            </Link>
+          ) : (
+            <span className="text-[var(--clr-muted)]">Not currently live</span>
+          )}
+          {repo !== "" ? (
+            <Link
+              href={repo}
+              target="_blank"
+              className="font-semibold text-[var(--clr-pink-accent)] no-underline transition hover:text-[var(--clr-sky-accent)]"
+            >
+              GitHub repo
+            </Link>
+          ) : null}
         </div>
       </div>
-    </section>
+    </article>
   );
 }

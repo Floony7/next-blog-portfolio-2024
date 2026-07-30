@@ -4,10 +4,15 @@ import { userData } from "@/data/mock";
 
 export default function About() {
   return (
-    <section className="site-width p-6 mt-10 mb-6">
-      <h1 className="page-title">About Fred</h1>
-      <article className="prose prose-xl max-w-none text-gray-200 grid-2-1">
-        <div>
+    <section className="site-width mb-16 mt-14">
+      <p className="text-sm uppercase tracking-[0.22em] text-[var(--clr-muted)]">
+        About Fred
+      </p>
+      <h1 className="mt-3 text-5xl font-semibold sm:text-7xl">
+        Frontend depth, fuller product ownership.
+      </h1>
+      <article className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.48fr)] lg:items-start">
+        <div className="prose prose-xl max-w-none text-[var(--clr-muted)]">
           <p>
             I&apos;m a senior frontend engineer focused on React, TypeScript and
             Next.js. Most of my recent work has been in commercial ecommerce and
@@ -63,10 +68,10 @@ export default function About() {
           </p>
         </div>
         <aside className="flex flex-col items-center">
-          <div className="bg-slate-700 rounded-lg">
+          <div className="glass-panel w-full rounded-[1.75rem] p-5">
             <ProfilePic width={250} height={250} />
-            <h4 className="text-white font-mono my-4 text-center">Vitals</h4>
-            <ul className="text-gray-200 list-none ms-6 px-0 font-mono">
+            <h2 className="my-4 text-center text-2xl font-semibold">Vitals</h2>
+            <ul className="list-none space-y-3 px-0 text-[var(--clr-muted)]">
               {userData
                 ? userData.map((item, i) => (
                     <VitalsItem key={i} name={item.name} text={item.value} />
@@ -83,8 +88,10 @@ export default function About() {
 
 function VitalsItem({ name, text }: { name: string; text: string }) {
   return (
-    <li className="my-0">
-      <span className="font-semibold text-teal-400">{name}:&nbsp;</span>
+    <li>
+      <span className="font-semibold text-[var(--clr-teal-accent)]">
+        {name}:&nbsp;
+      </span>
       {text}
     </li>
   );

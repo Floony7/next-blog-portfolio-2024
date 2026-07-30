@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { nunito } from "@/lib/utils";
 
-const plex = IBM_Plex_Sans({ weight: "400", subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Fred Lunjevich | Web Developer | UK",
+  title: "Fred Lunjevich | Senior Frontend Engineer",
   description:
-    "My name is Fred and I am passionate about all things web development, frontend, backend, TypeScript, Next.js and React",
+    "Senior frontend engineer building React, TypeScript and Next.js products across ecommerce, CMS integrations and API-heavy workflows.",
 };
 
 export default function RootLayout({
@@ -18,10 +15,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`min-h-screen bg-slate-900 text-white ${nunito.className}`}
+        className={`aurora-shell min-h-screen ${nunito.className}`}
       >
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const theme = localStorage.getItem("theme") || "dark";
+                document.documentElement.classList.toggle("dark", theme === "dark");
+              } catch {}
+            `,
+          }}
+        />
         <Navbar />
         <main>{children}</main>
         {/* <Footer /> */}
