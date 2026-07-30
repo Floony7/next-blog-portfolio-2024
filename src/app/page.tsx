@@ -1,7 +1,7 @@
 import { Hero } from "@/components/hero";
 import { Posts } from "@/components/posts";
 import PortfolioItem from "@/components/portfolio-item";
-import { projectsData } from "@/data/mock";
+import { projectsData, areas } from "@/data";
 import Link from "next/link";
 
 export default function Home() {
@@ -13,12 +13,7 @@ export default function Home() {
 
       <section className="site-width">
         <div className="grid gap-4 border-y border-[var(--clr-border)] py-6 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            ["Frontend depth", "React, TypeScript, Next.js and accessible UI systems."],
-            ["Commercial context", "Ecommerce, CMS integrations, catalogues and release workflows."],
-            ["Product ownership", "Practical trade-offs from requirements through production support."],
-            ["Full-stack direction", "Node.js, APIs, auth, databases and backend architecture."],
-          ].map(([title, text]) => (
+          {areas.map(([title, text]) => (
             <article key={title} className="space-y-2">
               <h2 className="text-xl font-semibold">{title}</h2>
               <p className="text-[var(--clr-muted)]">{text}</p>

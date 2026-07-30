@@ -1,5 +1,5 @@
 import PortfolioItem from "@/components/portfolio-item";
-import { projectsData } from "@/data/mock";
+import { projectsData } from "@/data";
 
 export default function Portfolio() {
   return (

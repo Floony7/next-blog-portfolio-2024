@@ -10,6 +10,13 @@ export const userData = [
   { name: 'Likes', value: 'Ice Hockey, Strength Training, Guitar, Conservation, Fantasy Premier League' }
 ] as const;
 
+export const areas = [
+            ["Frontend depth", "React, TypeScript, Next.js and accessible UI systems."],
+            ["Commercial context", "Ecommerce, CMS integrations, catalogues and release workflows."],
+            ["Product ownership", "Practical trade-offs from requirements through production support."],
+            ["Full-stack direction", "Node.js, APIs, auth, databases and backend architecture."],
+          ]
+
 export type Project = {
     id: string,
     shortName: string;

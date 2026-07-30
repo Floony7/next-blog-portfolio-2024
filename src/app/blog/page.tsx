@@ -1,5 +1,5 @@
 import { Posts } from "@/components/posts";
-import { tags } from "@/data/mock";
+import { tags } from "@/data";
 
 export default function Blog() {
   return (

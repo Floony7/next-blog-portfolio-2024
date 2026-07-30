@@ -1,7 +1,7 @@
 "use client";
 
 import { getPostsByTag } from "@/actions/actions";
-import { tags } from "@/data/mock";
+import { tags } from "@/data";
 import { useState } from "react";
 
 export const TagSearch = () => {

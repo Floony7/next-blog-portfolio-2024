@@ -1,4 +1,4 @@
-import { projectsData } from "@/data/mock";
+import { projectsData } from "@/data";
 
 export default async function ProjectPage({
   params,

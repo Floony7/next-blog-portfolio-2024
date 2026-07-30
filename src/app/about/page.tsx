@@ -1,6 +1,6 @@
 import FplRank2 from "@/components/fpl-rank2";
 import { ProfilePic } from "@/components/profile-pic";
-import { userData } from "@/data/mock";
+import { userData } from "@/data";
 
 export default function About() {
   return (
