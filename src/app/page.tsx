@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <section className="pb-16">
       <Hero />
-
       <section className="site-width">
         <div className="grid gap-4 border-y border-[var(--clr-border)] py-6 sm:grid-cols-2 lg:grid-cols-4">
           {areas.map(([title, text]) => (

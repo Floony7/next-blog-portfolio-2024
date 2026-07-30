@@ -15,7 +15,16 @@ export const areas = [
             ["Commercial context", "Ecommerce, CMS integrations, catalogues and release workflows."],
             ["Product ownership", "Practical trade-offs from requirements through production support."],
             ["Full-stack direction", "Node.js, APIs, auth, databases and backend architecture."],
-          ]
+          ];
+
+export const technicalExpertise = [
+              "React",
+              "TypeScript",
+              "Next.js",
+              "Headless commerce",
+              "APIs",
+              "Technical leadership",
+            ];
 
 export type Project = {
     id: string,

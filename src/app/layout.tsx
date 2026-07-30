@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
-import { nunito } from "@/lib/utils";
+import { poppins } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Fred Lunjevich | Senior Frontend Engineer",
@@ -16,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body
-        className={`aurora-shell min-h-screen ${nunito.className}`}
-      >
+      <body className={`aurora-shell min-h-screen ${poppins.className}`}>
         <script
           dangerouslySetInnerHTML={{
             __html: `
