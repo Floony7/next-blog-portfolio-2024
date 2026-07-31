@@ -17,24 +17,15 @@ export default function About() {
           <p>
             I&apos;m a senior frontend engineer specialising in React,
             TypeScript and Next.js, with recent experience across ecommerce and
-            product teams. My work often sits where the interface meets the
-            wider product system: APIs, CMS platforms, customer data, search,
-            recommendations and release workflows.
+            product teams. I love what I do, and I&apos;m always looking for
+            ways to improve my craft and grow as a developer. So while I&apos;m
+            happy to be a frontend specialist, I&apos;m also interested in
+            expanding into full-stack product engineering.
           </p>
           <p>
-            Frontend is still my strongest lane. I enjoy the details that make
-            interfaces reliable in production: clear component boundaries,
-            accessible HTML, state management, performance, API integration,
-            code review and the practical trade-offs needed to ship maintainable
-            product work.
-          </p>
-          <p>
-            I&apos;m also deliberately growing into more product-focused
-            full-stack engineering, spending more time with Node.js, server-side
-            TypeScript, API design, authentication, databases, micro-services
-            and testing. I&apos;m interested in owning more of the product layer
-            around the interface, including the backend decisions and data
-            models that shape what a product can become.
+            In my spare time, I am finding myself drawn to deeper topics in
+            Node.js, server-side TypeScript, API design, authentication,
+            databases, micro-services and testing.
           </p>
           <h3>How I got here</h3>
           <p>
@@ -42,12 +33,13 @@ export default function About() {
             with HTML during my Communication Studies degree at Auckland
             University of Technology, then later became Web Co-ordinator in the
             Humanities faculty. That role gave me room to build WordPress and
-            jQuery-era sites, sharpen my CSS, and learn how real people manage
-            real content.
+            jQuery-era sites, sharpen my CSS, and learn how content is managed
+            in the real world.
           </p>
           <p>
-            In 2017, I dived deeper into JavaScript and React. A few years later
-            I joined motion capture tech company&nbsp;
+            In 2017, after a series of roles in marketing and content
+            management,I dived deeper into JavaScript and React. A few years
+            later I joined motion capture tech company&nbsp;
             <a
               href="https://stretchsense.com/"
               target="_blank"
@@ -55,21 +47,29 @@ export default function About() {
             >
               StretchSense
             </a>
-            . As a digital marketing assistant, I was always enviously looking
-            over at the Software Team as they did all these cool things with
-            motion capture gloves. I desperately wanted to be a developer, and
-            after a year at the company, the opportunity to take on a React
-            frontend role landed on my desk. I was tasked with leading the Hand
-            Engine software rebuild both in NZ and the UK.
+            . Initially as a digital marketing assistant, I was always enviously
+            looking over at the Software Team as they did all these cool things
+            with motion capture gloves and code. I desperately wanted to be a
+            developer, and after a year at the company, the opportunity to take
+            on a React frontend role landed on my desk. I was tasked with
+            leading the Hand Engine software rebuild in NZ and later in the UK.
           </p>
           <p>
-            Since moving to Birmingham in 2022, I&apos;ve worked mainly on
-            Next.js ecommerce at{" "}
+            Having moved to Birmingham in 2022 and leaving StretchSense in late
+            2023, I&apos;ve worked mainly on Next.js ecommerce at{" "}
             <a href="https://5874commerce.com/" target="_blank">
               5874 Commerce
             </a>
             , including multi-region storefronts, BigCommerce integrations and
             headless CMS implementations.
+          </p>
+          <p>
+            My next chapter in the journey is being written right now, as I cast
+            my eyes out into the world and see many potentially rewarding
+            avenues. Where exactly will I end up? Well, what I can say is that
+            I&apos;m excited to see where this path leads. I&apos;m actively
+            preparing myself for greater things. Life is too short to play small
+            after all!
           </p>
         </div>
         <aside className="flex flex-col items-center">
