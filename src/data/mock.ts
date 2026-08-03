@@ -34,8 +34,7 @@ export type Project = {
     subtitle: string;
     tech: string;
     description: string;
-    paragraphOne: string;
-    paragraphTwo: string;
+    paragraphs: readonly string[];
     url: string;
     repo: string;
     hasVideo: boolean;
@@ -52,8 +51,11 @@ export const projectsData = [
     tech: 'React / TypeScript / Next.js / GraphQL / Big Commerce',
     description: 'Led development of a multi-region ecommerce platform serving US, Canada and Europe from a single Next.js codebase. Implemented advanced ecommerce functionality including discount validation, coupon application, persistent cart logic and customer certification-based purchasing controls. Included Vercel management.',
     // TODO: Add factual project details: team size, release scope, performance constraints, measurable outcomes and specific ownership boundaries.
-    paragraphOne: '',
-    paragraphTwo: '',
+    paragraphs: [
+      'Movora is a global ecommerce platform for a leading manufacturer of motion capture gloves. The platform serves customers in the US, Canada and Europe from a single Next.js codebase, with multi-language support and region-specific content.',
+      'I led the development of the platform, implementing advanced ecommerce functionality including discount validation, coupon application, persistent cart logic and customer certification-based purchasing controls.',
+      'The project involved close collaboration with the design team, as well as with the backend team to ensure seamless integration with the Big Commerce API.'
+    ],
     url: 'https://movora.com/',
     repo: '',
     hasVideo: false
@@ -67,8 +69,11 @@ export const projectsData = [
     tech: 'React / TypeScript / Redux / Bootstrap / RxJS / Node.js',
     description: 'Frontend development for a rebuild of StretchSense Hand Engine, including React and TypeScript UI work, Redux state implementation, info panels, feature windows and custom hand implementations with Three.js.',
     // TODO: Add factual project details: product context, exact frontend ownership, release impact, and any collaboration with backend or hardware teams.
-    paragraphOne: '',
-    paragraphTwo: '',
+    paragraphs: [
+      'Hand Engine is a software application for configuring and calibrating motion capture gloves. It is used by customers to set up their gloves for motion capture, and to calibrate them for accurate tracking.',
+      'I was responsible for the frontend development of the Hand Engine software, including implementing the UI in React and TypeScript, managing state with Redux, and integrating with the backend API.',
+      'The project involved close collaboration with the backend team, as well as with hardware engineers to ensure that the software worked seamlessly with the gloves.'
+    ],
     url: 'https://stretchsense.com/',
     repo: '',
     hasVideo: false
@@ -82,8 +87,11 @@ export const projectsData = [
     tech: 'React / TypeScript / Redux / Bootstrap / RxJS / Node.js',
     description: 'UI implementation for calibrating StretchSense Fidelity gloves. The revision of glove is established upon device connection, which switches the UI for calibration. This image shows the manual calibration for an older revision of StretchSense gloves.',
     // TODO: Add factual project details: calibration workflow constraints, state model decisions, user impact and validation approach.
-    paragraphOne: '',
-    paragraphTwo: '',
+    paragraphs: [
+      'The Hand Engine software includes a calibration feature for StretchSense Fidelity gloves. The calibration process is essential for ensuring accurate motion capture data.',
+      'I implemented the UI for the calibration feature, which involves detecting the glove revision upon device connection and switching the UI accordingly.',
+      'The project required careful consideration of the calibration workflow, state management, and user experience to ensure that users could easily calibrate their gloves.'
+    ],
     url: 'https://floony7.wistia.com/medias/07x2whfb3a',
     repo: '',
     hasVideo: false
@@ -97,8 +105,11 @@ export const projectsData = [
     tech: 'Astro / TypeScript',
     description: 'Small Astro and TypeScript site for an independent craft business, built as a simple promotional layer around an Etsy store with room to expand as product lines grow.',
     // TODO: Add factual project details if this becomes a stronger product case study: content model, owner workflow, and expansion plans.
-    paragraphOne: '',
-    paragraphTwo: '',
+    paragraphs: [
+      'With Love from Pip and Kip is a small promotional site for an independent craft business. The site was built using Astro and TypeScript, and serves as a simple promotional layer around the business\'s Etsy store.',
+      'The project involved designing a clean and modern layout, implementing responsive design, and ensuring that the site was fast and accessible.',
+      'The site is designed to be easily expandable as the business grows and adds new product lines.'
+    ],
     url: 'https://pipandkip.com/',
     repo: 'https://github.com/Floony7/pip-and-kip-website',
     hasVideo: false
@@ -126,8 +137,11 @@ export const projectsData = [
     tech: 'Next.js 14 / Radix UI Theme / Tailwind',
     description: 'Next.js 14 experiment using a public API to search Pokemon and render profile data, useful for practising App Router data fetching, UI composition and third-party API integration.',
     // TODO: Add factual project details: data fetching approach, error states, accessibility considerations and any testing added.
-    paragraphOne: '',
-    paragraphTwo: '',
+    paragraphs: [
+      'This project is a Next.js 14 application that allows users to search for Pokemon and view their profile data. It uses a public API to fetch the data and renders it in a clean and modern UI.',
+      'The project was built as an experiment to practice using the App Router for data fetching, composing UI components, and integrating with third-party APIs.',
+      'The application includes error handling for failed API requests, and is designed to be accessible and responsive across different devices.'
+    ],
     url: 'https://pokedex-unofficial.vercel.app/',
     repo: 'https://github.com/Floony7/pokemon-directory',
     hasVideo: false
@@ -169,8 +183,11 @@ export const projectsData = [
     tech: 'HTML5 / CSS3 / jQuery',
     description: 'Earlier web design and development work for a student-run cafe, included for background rather than as a current technical focus.',
     // TODO: Add factual project details or consider moving older jQuery projects into a short "early work" section.
-    paragraphOne: '',
-    paragraphTwo: '',
+    paragraphs: [
+      'Piko Cafe is a student-run cafe in the Faculty of Hospitality at Auckland University of Technology. I was involved in the redesign and development of their website, which was built using HTML5, CSS3, and jQuery.',
+      'The project involved creating a modern and responsive design, implementing interactive features using jQuery, and ensuring that the site was accessible and user-friendly.',
+      'While this project is not a current technical focus, it provided valuable experience in web design and development.'
+    ],
     url: '',
     repo: '',
     hasVideo: false
@@ -184,8 +201,11 @@ export const projectsData = [
     tech: 'HTML5 / CSS3 / jQuery',
     description: 'Earlier HTML, CSS and jQuery site work for a student-run restaurant, useful context for the long-term web background but secondary to current React and Next.js work.',
     // TODO: Add factual project details or consider moving older jQuery projects into a short "early work" section.
-    paragraphOne: '',
-    paragraphTwo: '',
+    paragraphs: [
+      'Four Seasons Restaurant is a student-run restaurant in the Faculty of Hospitality at Auckland University of Technology. I was involved in the web development for their website, which was built using HTML5, CSS3, and jQuery.',
+      'The project involved creating a visually appealing design, implementing interactive features using jQuery, and ensuring that the site was responsive and user-friendly.',
+      'While this project is not a current technical focus, it provided valuable experience in web development and design.'
+    ],
     url: '',
     repo: '',
     hasVideo: false

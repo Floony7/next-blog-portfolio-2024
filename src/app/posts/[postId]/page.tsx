@@ -2,6 +2,7 @@ import Link from "next/link";
 import getFormattedDate from "@/lib/format-date";
 import { getSortedPostsData, getPostData } from "@/lib/posts";
 import { notFound } from "next/navigation";
+import ReturnLink from "@/components/return-link";
 
 export function generateStaticParams() {
   const posts = getSortedPostsData();
@@ -52,29 +53,19 @@ export default async function Post({ params }: { params: { postId: string } }) {
         <h1 className="mt-3 max-w-4xl text-4xl font-semibold sm:text-6xl">
           {title}
         </h1>
-      <div className="mt-5 flex flex-wrap gap-2">
-        {tags
-          ? tags.map((tag, i) => (
-              <span
-                key={i}
-                className="soft-tag"
-              >
-                {tag}
-              </span>
-            ))
-          : null}
+        <div className="mt-5 flex flex-wrap gap-2">
+          {tags
+            ? tags.map((tag, i) => (
+                <span key={i} className="soft-tag">
+                  {tag}
+                </span>
+              ))
+            : null}
         </div>
       </header>
       <article className="prose prose-xl prose-strong:text-[var(--clr-text)] mt-10 max-w-none text-[var(--clr-muted)]">
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        <p>
-          <Link
-            className="font-semibold uppercase tracking-[0.18em] text-[var(--clr-teal-accent)] underline-offset-4 hover:text-[var(--clr-sky-accent)]"
-            href="/blog"
-          >
-            ← Return to blog
-          </Link>
-        </p>
+        <ReturnLink href="/blog" text="Back to blog" />
       </article>
     </section>
   );

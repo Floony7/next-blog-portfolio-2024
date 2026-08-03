@@ -38,7 +38,7 @@ export default function About() {
           </p>
           <p>
             In 2017, after a series of roles in marketing and content
-            management,I dived deeper into JavaScript and React. A few years
+            management, I dived deeper into JavaScript and React. A few years
             later I joined motion capture tech company&nbsp;
             <a
               href="https://stretchsense.com/"
@@ -47,12 +47,13 @@ export default function About() {
             >
               StretchSense
             </a>
-            . Initially as a digital marketing assistant, I was always enviously
-            looking over at the Software Team as they did all these cool things
-            with motion capture gloves and code. I desperately wanted to be a
-            developer, and after a year at the company, the opportunity to take
-            on a React frontend role landed on my desk. I was tasked with
-            leading the Hand Engine software rebuild in NZ and later in the UK.
+            . Initially, as a digital marketing assistant, I was always
+            enviously looking over at the Software Team as they did all these
+            cool things with motion capture gloves and code. I desperately
+            wanted to be a developer, and after a year at the company, the
+            opportunity to take on a React frontend role landed on my desk. I
+            was tasked with leading the Hand Engine software rebuild in NZ and
+            later in the UK.
           </p>
           <p>
             Having moved to Birmingham in 2022 and leaving StretchSense in late
