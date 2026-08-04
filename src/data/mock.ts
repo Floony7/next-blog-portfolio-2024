@@ -26,6 +26,12 @@ export const technicalExpertise = [
               "Technical leadership",
             ];
 
+export const siteLinks = [
+  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'About', href: '/about' },
+] as const;
+
 export type Project = {
     id: string,
     shortName: string;

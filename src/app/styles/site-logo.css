@@ -1,0 +1,95 @@
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--clr-text);
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.site-logo:hover,
+.site-logo:focus-visible {
+  color: var(--clr-sky-accent);
+}
+
+.css-logo {
+  position: relative;
+  display: inline-grid;
+  width: 3.25rem;
+  aspect-ratio: 1;
+  place-items: center;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border: 1px solid
+    color-mix(in srgb, var(--clr-sky-accent) 36%, var(--clr-border));
+  border-radius: 0.75rem;
+  background:
+    radial-gradient(circle at 24% 20%, var(--clr-teal-accent), transparent 32%),
+    radial-gradient(circle at 78% 72%, var(--clr-pink-accent), transparent 34%);
+  box-shadow:
+    0 0 0 0.3rem color-mix(in srgb, var(--clr-sky-accent) 9%, transparent),
+    0 1rem 2rem rgba(3, 12, 16, 0.16);
+  isolation: isolate;
+}
+
+.css-logo::before,
+.css-logo::after {
+  position: absolute;
+  z-index: 1;
+  /* font-family: var(--font-mono); */
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.css-logo::before {
+  content: "F";
+  top: 0.38rem;
+  left: 0.48rem;
+  color: var(--clr-text);
+  font-size: 1.9rem;
+}
+
+.css-logo::after {
+  content: "L";
+  right: 0.42rem;
+  bottom: 0.34rem;
+  color: var(--clr-text);
+  font-size: 2rem;
+  /* text-shadow: -0.28rem -0.28rem 0
+    color-mix(in srgb, var(--clr-teal-accent) 46%, transparent); */
+}
+
+.css-logo__word {
+  display: none;
+  /* font-family: var(--font-mono); */
+  font-size: clamp(1.45rem, 1.8vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.site-logo:hover .css-logo,
+.site-logo:focus-visible .css-logo {
+  border-color: var(--clr-sky-accent);
+  box-shadow:
+    0 0 0 0.34rem color-mix(in srgb, var(--clr-sky-accent) 15%, transparent),
+    0 1.2rem 2.4rem rgba(3, 12, 16, 0.22);
+}
+
+@media (min-width: 640px) {
+  .css-logo__word {
+    display: inline;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-logo {
+    transition: color 180ms ease;
+  }
+
+  .site-logo:hover {
+    transform: none;
+  }
+}
