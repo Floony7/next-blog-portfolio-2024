@@ -1,5 +1,6 @@
 import { projectsData } from "@/data";
 import ReturnLink from "@/components/return-link";
+import ImageView from "@/components/image-view";
 
 export default async function ProjectPage({
   params,
@@ -8,7 +9,7 @@ export default async function ProjectPage({
 }) {
   const { shortName } = params;
   const project = projectsData.find((p) => p.shortName === shortName);
-  const { title, description, paragraphs } = project || {};
+  const { title, description, paragraphs, img } = project || {};
 
   return (
     <section className="site-width mb-16 mt-14 project-details">
@@ -22,16 +23,27 @@ export default async function ProjectPage({
             <h1 className="mb-4 mt-3 text-4xl font-semibold sm:text-6xl">
               {title}
             </h1>
-            <p className="max-w-3xl text-xl leading-relaxed text-[var(--clr-muted)]">
-              {description}
-            </p>
-            {paragraphs
-              ? paragraphs?.map((paragraph, index) => (
-                  <p key={`${project.shortName}-paragraph-${index}`}>
-                    {paragraph}
-                  </p>
-                ))
-              : null}
+            <div className="mb-4 flex flex-col-reverse gap-4 sm:gap-6 md:flex-row">
+              <div className="flex flex-col justify-center">
+                <p className="relative max-w-3xl text-xl leading-relaxed text-[var(--clr-muted)] lg:before:absolute lg:before:-left-5 lg:before:-top-12 lg:before:font-serif lg:before:text-9xl lg:before:leading-none lg:before:text-[var(--clr-pink-accent)] lg:before:opacity-50 lg:before:content-['“']">
+                  {description}
+                </p>
+              </div>
+
+              {img && (
+                <ImageView filename={img} title={title || "Project Image"} />
+              )}
+            </div>
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold mb-2">Project details</h3>
+              {paragraphs
+                ? paragraphs?.map((paragraph, index) => (
+                    <p key={`${project.shortName}-paragraph-${index}`}>
+                      {paragraph}
+                    </p>
+                  ))
+                : null}
+            </div>
           </div>
         ) : (
           <h1>No such project</h1>

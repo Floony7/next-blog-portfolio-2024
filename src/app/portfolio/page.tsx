@@ -1,3 +1,4 @@
+import ColorLink from "@/components/color-link";
 import PortfolioItem from "@/components/portfolio-item";
 import { projectsData } from "@/data";
 
@@ -15,6 +16,14 @@ export default function Portfolio() {
           Selected frontend and product engineering work across React,
           TypeScript, Next.js, ecommerce, CMS integrations and interface-heavy
           software.
+        </p>
+        <p className="mt-5">
+          <ColorLink
+            href="https://github.com/Floony7/next-blog-portfolio-2024"
+            color="pink"
+            text="View Github Repo for this Portfolio Site"
+            isExternal={true}
+          />
         </p>
         <div className="mt-10">
           {projectsData.map((project) => (

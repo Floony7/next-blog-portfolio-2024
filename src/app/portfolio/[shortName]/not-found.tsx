@@ -1,3 +1,4 @@
+import ReturnLink from "@/components/return-link";
 import Link from "next/link";
 
 export default function NotFound() {
@@ -5,11 +6,7 @@ export default function NotFound() {
     <main className="flex justify-center items-center">
       <section>
         <h1>Ooops! Ne&apos;er heard of such project?!</h1>
-        <p>
-          <Link href="/portfolio" className="fancy-anchor">
-            Return to Portfolio
-          </Link>
-        </p>
+        <ReturnLink href="/portfolio" text="Back to portfolio" />
       </section>
     </main>
   );
