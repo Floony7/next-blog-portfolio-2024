@@ -1,0 +1,10 @@
+
+@baseUrl = https://fantasy.premierleague.com
+@entryId = 241312
+@kiwiFplId = 120307
+
+### Manager entry
+GET {{baseUrl}}/api/entry/{{entryId}}/
+
+### Minileague
+GET {{baseUrl}}/api/leagues-classic/{{kiwiFplId}}/standings/
