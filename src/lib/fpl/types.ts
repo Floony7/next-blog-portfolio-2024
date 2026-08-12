@@ -1,144 +1,29 @@
-export type FplClassicLeague = {
-  name: string;
-  entry_rank: number;
-  entry_last_rank: number;
-};
+import { z } from 'zod';
+import { FplGameweekLiveElementSchema, FplClassicLeagueSchema, FplBootstrapElementSchema, FplMiniLeaguePageSchema, FplGameweekLiveResponseSchema, FplMiniLeagueNewEntrySchema, FplMiniLeagueStandingSchema, FplMiniLeagueStandingsResponseSchema, FplEntryResponseSchema, FplBootstrapEventSchema, FplBootstrapResponseSchema, FplMiniLeagueSchema, FplManagerPickSchema, FplManagerPicksResponseSchema, FplManagerTransferSchema, PlayerGameweekScoreSchema, MiniLeagueManagerGameweekRowSchema } from './schema';
 
-export type FplEntryResponse = {
-  leagues?: {
-    classic?: FplClassicLeague[];
-  };
-};
+// FPL Classic
+export type FplClassicLeague = z.infer<typeof FplClassicLeagueSchema>;
+export type FplEntryResponse = z.infer<typeof FplEntryResponseSchema>;
 
-export type FplBootstrapElement = {
-  id: number;
-  first_name: string;
-  second_name: string;
-  web_name: string;
-  element_type: number;
-  team: number;
-};
+// FPL Bootstrap
+export type FplBootstrapElement = z.infer<typeof FplBootstrapElementSchema>;
+export type FplBootstrapEvent = z.infer<typeof FplBootstrapEventSchema>;
+export type FplBootstrapResponse = z.infer<typeof FplBootstrapResponseSchema>;
 
-export type FplBootstrapEvent = {
-  id: number;
-  name: string;
-  is_current: boolean;
-  is_next: boolean;
-  is_finished: boolean;
-  finished: boolean;
-};
+// FPL Gameweek live
+export type FplGameweekLiveElement = z.infer<typeof FplGameweekLiveElementSchema>;
+export type FplGameweekLiveResponse = z.infer<typeof FplGameweekLiveResponseSchema>;
 
-export type FplBootstrapResponse = {
-  elements: FplBootstrapElement[];
-  events: FplBootstrapEvent[];
-};
+// FPL Mini League
+export type FplMiniLeagueStanding = z.infer<typeof FplMiniLeagueStandingSchema>;
+export type FplMiniLeagueNewEntry = z.infer<typeof FplMiniLeagueNewEntrySchema>;
+export type FplMiniLeaguePage<TResult> = z.infer<ReturnType<typeof FplMiniLeaguePageSchema<z.ZodType<TResult>>>>;
+export type FplMiniLeague = z.infer<typeof FplMiniLeagueSchema>;
+export type FplMiniLeagueStandingsResponse = z.infer<typeof FplMiniLeagueStandingsResponseSchema>;
 
-export type FplGameweekLiveElement = {
-  id: number;
-  stats: {
-    total_points: number;
-  };
-};
-
-export type FplGameweekLiveResponse = {
-  elements: FplGameweekLiveElement[];
-};
-
-export type FplMiniLeagueStanding = {
-  entry: number;
-  entry_name: string;
-  player_name: string;
-  rank: number;
-  last_rank: number;
-  total: number;
-};
-
-export type FplMiniLeagueNewEntry = {
-  entry: number;
-  entry_name: string;
-  joined_time: string;
-  player_first_name: string;
-  player_last_name: string;
-};
-
-export type FplMiniLeaguePage<TResult> = {
-  has_next: boolean;
-  page: number;
-  results: TResult[];
-};
-
-export type FplMiniLeague = {
-  id: number;
-  name: string;
-  created: string;
-  closed: boolean;
-  max_entries: number | null;
-  league_type: string;
-  scoring: string;
-  admin_entry: number | null;
-  start_event: number;
-  code_privacy: string;
-  has_cup: boolean;
-  cup_league: number | null;
-  rank: number | null;
-};
-
-export type FplMiniLeagueStandingsResponse = {
-  new_entries: FplMiniLeaguePage<FplMiniLeagueNewEntry>;
-  last_updated_data: string | null;
-  league: FplMiniLeague;
-  standings: FplMiniLeaguePage<FplMiniLeagueStanding>;
-};
-
-export type FplManagerPick = {
-  element: number;
-  position: number;
-  multiplier: number;
-  is_captain: boolean;
-  is_vice_captain: boolean;
-};
-
-export type FplManagerPicksResponse = {
-  active_chip: string | null;
-  entry_history: {
-    points: number;
-    total_points: number;
-    event_transfers: number;
-    event_transfers_cost: number;
-    points_on_bench: number;
-  };
-  picks: FplManagerPick[];
-};
-
-export type FplManagerTransfer = {
-  element_in: number;
-  element_in_cost: number;
-  element_out: number;
-  element_out_cost: number;
-  entry: number;
-  event: number;
-  time: string;
-};
-
-export type PlayerGameweekScore = {
-  id: number;
-  name: string;
-  points: number;
-};
-
-export type MiniLeagueManagerGameweekRow = {
-  entryId: number;
-  teamName: string;
-  playerName: string;
-  transferredIn: PlayerGameweekScore[];
-  transferredOut: PlayerGameweekScore[];
-  transferPointsDelta: number;
-  transferCost: number;
-  bench: PlayerGameweekScore[];
-  chipUsed: string | null;
-  captain: PlayerGameweekScore | null;
-  captainPoints: number;
-  gameweekPoints: number;
-  totalPoints: number;
-  benchPoints: number;
-};
+// FPL Manager
+export type FplManagerPick = z.infer<typeof FplManagerPickSchema>;
+export type FplManagerPicksResponse = z.infer<typeof FplManagerPicksResponseSchema>;
+export type FplManagerTransfer = z.infer<typeof FplManagerTransferSchema>;
+export type PlayerGameweekScore = z.infer<typeof PlayerGameweekScoreSchema>;
+export type MiniLeagueManagerGameweekRow = z.infer<typeof MiniLeagueManagerGameweekRowSchema>;
