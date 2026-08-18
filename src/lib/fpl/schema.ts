@@ -17,17 +17,10 @@ export const FplMiniLeagueNewEntrySchema = z.object({
     player_last_name: z.string(),
 });
 
-export const FplMiniLeagueStandingsResponseSchema = z.object({
-    standings: z.object({
-        results: z.array(FplMiniLeagueStandingSchema),
-        new_entries: z.array(FplMiniLeagueNewEntrySchema),
-    }),
-});
-
 export const FplMiniLeaguePageSchema = <T extends z.ZodTypeAny>(item: T) => z.object({
     has_next: z.boolean(),
     page: z.number(),
-    results: z.array(FplMiniLeagueStandingSchema),
+    results: z.array(item),
 });
 
 export const FplMiniLeagueSchema = z.object({
@@ -44,6 +37,13 @@ export const FplMiniLeagueSchema = z.object({
     has_cup: z.boolean(),
     cup_league: z.number().nullable(),
     rank: z.number().nullable(),
+});
+
+export const FplMiniLeagueStandingsResponseSchema = z.object({
+    new_entries: FplMiniLeaguePageSchema(FplMiniLeagueNewEntrySchema),
+    last_updated_data: z.string().nullable(),
+    league: FplMiniLeagueSchema,
+    standings: FplMiniLeaguePageSchema(FplMiniLeagueStandingSchema).partial(),
 });
 
 export const FplClassicLeagueSchema = z.object({
