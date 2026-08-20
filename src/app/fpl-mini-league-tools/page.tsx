@@ -3,9 +3,10 @@ import { getMiniLeagueStandings } from "@/lib/fpl/service";
 type PlayerPoints = {
   name: string;
   points: number;
+  position?: "GK" | "DEF" | "MID" | "FWD";
 };
 
-type TransferSummary = {
+type GameweekSummary = {
   teamName: string;
   userName: string;
   transferredIn: PlayerPoints[];
@@ -17,65 +18,13 @@ type TransferSummary = {
   captain: PlayerPoints;
 };
 
-const transferSummaries: TransferSummary[] = [
-  {
-    teamName: "Mighty Reds",
-    userName: "Alex Carter",
-    transferredIn: [
-      { name: "Bukayo Saka", points: 9 },
-      { name: "Ollie Watkins", points: 6 },
-    ],
-    transferredOut: [
-      { name: "Phil Foden", points: 2 },
-      { name: "Darwin Nunez", points: 1 },
-    ],
-    transferPointsResult: 12,
-    pointsHit: -4,
-    benchPlayers: [
-      { name: "Joao Pedro", points: 5 },
-      { name: "Ezri Konsa", points: 2 },
-      { name: "Bernd Leno", points: 1 },
-    ],
-    chipUsed: "WC",
-    captain: { name: "Erling Haaland", points: 14 },
-  },
-  {
-    teamName: "Expected Toulouse",
-    userName: "Sam Morgan",
-    transferredIn: [{ name: "Cole Palmer", points: 11 }],
-    transferredOut: [{ name: "Bruno Fernandes", points: 4 }],
-    transferPointsResult: 7,
-    pointsHit: 0,
-    benchPlayers: [
-      { name: "Anthony Gordon", points: 3 },
-      { name: "Pervis Estupinan", points: 1 },
-      { name: "Alphonse Areola", points: 0 },
-    ],
-    chipUsed: "None",
-    captain: { name: "Mohamed Salah", points: 18 },
-  },
-  {
-    teamName: "Ctrl Alt De Ligt",
-    userName: "Priya Shah",
-    transferredIn: [
-      { name: "Son Heung-min", points: 8 },
-      { name: "Dominic Solanke", points: 2 },
-    ],
-    transferredOut: [
-      { name: "Martin Odegaard", points: 3 },
-      { name: "Alexander Isak", points: 9 },
-    ],
-    transferPointsResult: -6,
-    pointsHit: -8,
-    benchPlayers: [
-      { name: "Levi Colwill", points: 6 },
-      { name: "Morgan Rogers", points: 2 },
-      { name: "Matt Turner", points: 0 },
-    ],
-    chipUsed: "TC",
-    captain: { name: "Son Heung-min", points: 8 },
-  },
-];
+async function getGameweekSummaries(): Promise<GameweekSummary[]> {
+  const { default: gameweekSummaries } = await import(
+    "@/data/gameweek-summaries.json"
+  );
+
+  return gameweekSummaries as GameweekSummary[];
+}
 
 function PlayerPointsList({ players }: { players: PlayerPoints[] }) {
   return (
@@ -109,7 +58,10 @@ function formatName(name: string): string {
 }
 
 export default async function MiniLeagueTools() {
-  const standings = await getMiniLeagueStandings(120307, 1);
+  const [standings, transferSummaries] = await Promise.all([
+    getMiniLeagueStandings(120307, 1),
+    getGameweekSummaries(),
+  ]);
   const leagueName = standings?.league?.name ?? "Mini league";
 
   return (
@@ -158,10 +110,10 @@ export default async function MiniLeagueTools() {
                   Transfers Out
                 </th>
                 <th scope="col" className="px-4 py-3 font-semibold">
-                  Net
+                  Hits
                 </th>
                 <th scope="col" className="px-4 py-3 font-semibold">
-                  Hits
+                  Net
                 </th>
                 <th scope="col" className="px-4 py-3 font-semibold">
                   Bench
@@ -196,6 +148,11 @@ export default async function MiniLeagueTools() {
                     <PlayerPointsList players={summary.transferredOut} />
                   </td>
                   <td className="px-4 py-4">
+                    <span className="font-mono font-semibold">
+                      {summary.pointsHit === 0 ? "0" : `${summary.pointsHit}`}
+                    </span>
+                  </td>
+                  <td className="px-4 py-4">
                     <span
                       className={
                         summary.transferPointsResult >= 0
@@ -204,11 +161,6 @@ export default async function MiniLeagueTools() {
                       }
                     >
                       {formatPointsDelta(summary.transferPointsResult)}
-                    </span>
-                  </td>
-                  <td className="px-4 py-4">
-                    <span className="font-mono font-semibold">
-                      {summary.pointsHit === 0 ? "0" : `${summary.pointsHit}`}
                     </span>
                   </td>
                   <td className="px-4 py-4">
