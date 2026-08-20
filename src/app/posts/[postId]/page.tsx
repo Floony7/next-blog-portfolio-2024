@@ -13,9 +13,9 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { postId: string };
+  params: Promise<{ postId: string }>;
 }) {
-  const { postId } = params;
+  const { postId } = await params;
   const posts = getSortedPostsData();
   const post = posts.find((p) => p.id === postId);
 
@@ -32,9 +32,13 @@ export async function generateMetadata({
   };
 }
 
-export default async function Post({ params }: { params: { postId: string } }) {
+export default async function Post({
+  params,
+}: {
+  params: Promise<{ postId: string }>;
+}) {
   const posts = getSortedPostsData();
-  const { postId } = params;
+  const { postId } = await params;
 
   if (!posts.find((post) => post.id === postId)) {
     notFound();

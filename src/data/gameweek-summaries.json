@@ -1,0 +1,160 @@
+[
+  {
+    "teamName": "Mighty Reds",
+    "userName": "Alex Carter",
+    "transferredIn": [
+      { "name": "Bukayo Saka", "points": 9 },
+      { "name": "Ollie Watkins", "points": 6 }
+    ],
+    "transferredOut": [
+      { "name": "Phil Foden", "points": 2 },
+      { "name": "Darwin Nunez", "points": 1 }
+    ],
+    "transferPointsResult": 12,
+    "pointsHit": -4,
+    "benchPlayers": [
+      { "name": "Joao Pedro", "points": 5, "position": "FWD" },
+      { "name": "Ezri Konsa", "points": 2, "position": "DEF" },
+      { "name": "Morgan Rogers", "points": 3, "position": "MID" },
+      { "name": "Bernd Leno", "points": 1, "position": "GK" }
+    ],
+    "chipUsed": "WC",
+    "captain": { "name": "Erling Haaland", "points": 14 }
+  },
+  {
+    "teamName": "Expected Toulouse",
+    "userName": "Sam Morgan",
+    "transferredIn": [{ "name": "Cole Palmer", "points": 11 }],
+    "transferredOut": [{ "name": "Bruno Fernandes", "points": 4 }],
+    "transferPointsResult": 7,
+    "pointsHit": 0,
+    "benchPlayers": [
+      { "name": "Anthony Gordon", "points": 3, "position": "MID" },
+      { "name": "Pervis Estupinan", "points": 1, "position": "DEF" },
+      { "name": "Cameron Archer", "points": 2, "position": "FWD" },
+      { "name": "Alphonse Areola", "points": 0, "position": "GK" }
+    ],
+    "chipUsed": "None",
+    "captain": { "name": "Mohamed Salah", "points": 18 }
+  },
+  {
+    "teamName": "Ctrl Alt De Ligt",
+    "userName": "Priya Shah",
+    "transferredIn": [
+      { "name": "Son Heung-min", "points": 8 },
+      { "name": "Dominic Solanke", "points": 2 }
+    ],
+    "transferredOut": [
+      { "name": "Martin Odegaard", "points": 3 },
+      { "name": "Alexander Isak", "points": 9 }
+    ],
+    "transferPointsResult": -6,
+    "pointsHit": -8,
+    "benchPlayers": [
+      { "name": "Levi Colwill", "points": 6, "position": "DEF" },
+      { "name": "Morgan Gibbs-White", "points": 2, "position": "MID" },
+      { "name": "Armando Broja", "points": 1, "position": "FWD" },
+      { "name": "Matt Turner", "points": 0, "position": "GK" }
+    ],
+    "chipUsed": "TC",
+    "captain": { "name": "Son Heung-min", "points": 8 }
+  },
+  {
+    "teamName": "No Kane No Gain",
+    "userName": "Jordan Ellis",
+    "transferredIn": [
+      { "name": "Jarrod Bowen", "points": 7 },
+      { "name": "Kieran Trippier", "points": 5 }
+    ],
+    "transferredOut": [
+      { "name": "Raheem Sterling", "points": 2 },
+      { "name": "Luke Shaw", "points": 0 }
+    ],
+    "transferPointsResult": 10,
+    "pointsHit": -4,
+    "benchPlayers": [
+      { "name": "Harry Maguire", "points": 2, "position": "DEF" },
+      { "name": "Andreas Pereira", "points": 4, "position": "MID" },
+      { "name": "Taiwo Awoniyi", "points": 1, "position": "FWD" },
+      { "name": "Jordan Pickford", "points": 3, "position": "GK" }
+    ],
+    "chipUsed": "None",
+    "captain": { "name": "Bukayo Saka", "points": 9 }
+  },
+  {
+    "teamName": "Grealish Lightning",
+    "userName": "Maya Bennett",
+    "transferredIn": [{ "name": "James Maddison", "points": 6 }],
+    "transferredOut": [{ "name": "Luis Diaz", "points": 10 }],
+    "transferPointsResult": -4,
+    "pointsHit": 0,
+    "benchPlayers": [
+      { "name": "Tino Livramento", "points": 1, "position": "DEF" },
+      { "name": "Harvey Barnes", "points": 2, "position": "MID" },
+      { "name": "Evan Ferguson", "points": 5, "position": "FWD" },
+      { "name": "Mark Flekken", "points": 2, "position": "GK" }
+    ],
+    "chipUsed": "BB",
+    "captain": { "name": "Cole Palmer", "points": 11 }
+  },
+  {
+    "teamName": "Lallanas In Pyjamas",
+    "userName": "Chris Taylor",
+    "transferredIn": [
+      { "name": "Trent Alexander-Arnold", "points": 8 },
+      { "name": "Nicolas Jackson", "points": 2 }
+    ],
+    "transferredOut": [
+      { "name": "Gabriel Martinelli", "points": 1 },
+      { "name": "Callum Wilson", "points": 0 }
+    ],
+    "transferPointsResult": 5,
+    "pointsHit": -4,
+    "benchPlayers": [
+      { "name": "Jan Paul van Hecke", "points": 2, "position": "DEF" },
+      { "name": "Mathias Jensen", "points": 3, "position": "MID" },
+      { "name": "Chris Wood", "points": 6, "position": "FWD" },
+      { "name": "Jose Sa", "points": 1, "position": "GK" }
+    ],
+    "chipUsed": "None",
+    "captain": { "name": "Erling Haaland", "points": 14 }
+  },
+  {
+    "teamName": "Neville Wears Prada",
+    "userName": "Imani Brooks",
+    "transferredIn": [{ "name": "Phil Foden", "points": 2 }],
+    "transferredOut": [{ "name": "Eberechi Eze", "points": 7 }],
+    "transferPointsResult": -5,
+    "pointsHit": 0,
+    "benchPlayers": [
+      { "name": "Ben White", "points": 4, "position": "DEF" },
+      { "name": "Bryan Mbeumo", "points": 6, "position": "MID" },
+      { "name": "Yoane Wissa", "points": 2, "position": "FWD" },
+      { "name": "Robert Sanchez", "points": 2, "position": "GK" }
+    ],
+    "chipUsed": "FH",
+    "captain": { "name": "Mohamed Salah", "points": 18 }
+  },
+  {
+    "teamName": "Pique Blinders",
+    "userName": "Ben Wallace",
+    "transferredIn": [
+      { "name": "Alexander Isak", "points": 9 },
+      { "name": "Pedro Porro", "points": 5 }
+    ],
+    "transferredOut": [
+      { "name": "Ollie Watkins", "points": 6 },
+      { "name": "Malo Gusto", "points": 1 }
+    ],
+    "transferPointsResult": 7,
+    "pointsHit": -4,
+    "benchPlayers": [
+      { "name": "Marc Guehi", "points": 2, "position": "DEF" },
+      { "name": "Conor Gallagher", "points": 3, "position": "MID" },
+      { "name": "Matheus Cunha", "points": 4, "position": "FWD" },
+      { "name": "Emiliano Martinez", "points": 5, "position": "GK" }
+    ],
+    "chipUsed": "None",
+    "captain": { "name": "Alexander Isak", "points": 9 }
+  }
+]

@@ -5,9 +5,9 @@ import ImageView from "@/components/image-view";
 export default async function ProjectPage({
   params,
 }: {
-  params: { shortName: string };
+  params: Promise<{ shortName: string }>;
 }) {
-  const { shortName } = params;
+  const { shortName } = await params;
   const project = projectsData.find((p) => p.shortName === shortName);
   const { title, description, paragraphs, img } = project || {};
 
