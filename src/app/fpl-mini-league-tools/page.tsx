@@ -6,6 +6,8 @@ type PlayerPoints = {
   position?: "GK" | "DEF" | "MID" | "FWD";
 };
 
+type Chip = "none" | "FH" | "WC" | "BB" | "TC";
+
 type GameweekSummary = {
   teamName: string;
   userName: string;
@@ -14,14 +16,13 @@ type GameweekSummary = {
   transferPointsResult: number;
   pointsHit: number;
   benchPlayers: PlayerPoints[];
-  chipUsed: string;
+  chipUsed: Chip;
   captain: PlayerPoints;
 };
 
 async function getGameweekSummaries(): Promise<GameweekSummary[]> {
-  const { default: gameweekSummaries } = await import(
-    "@/data/gameweek-summaries.json"
-  );
+  const { default: gameweekSummaries } =
+    await import("@/data/gameweek-summaries.json");
 
   return gameweekSummaries as GameweekSummary[];
 }
@@ -167,9 +168,7 @@ export default async function MiniLeagueTools() {
                     <PlayerPointsList players={summary.benchPlayers} />
                   </td>
                   <td className="px-2 py-4">
-                    <span className="inline-flex rounded-full border border-[var(--clr-border)] px-3 py-1 text-xs font-semibold text-[var(--clr-muted)]">
-                      {summary.chipUsed}
-                    </span>
+                    <ChipPill chip={summary.chipUsed} />
                   </td>
                   <td className="px-4 py-4">
                     <span className="font-semibold">
@@ -186,5 +185,30 @@ export default async function MiniLeagueTools() {
         </div>
       </div>
     </main>
+  );
+}
+
+const colorMap: Record<Chip, string> = {
+  none: "transparent",
+  FH: "var(--clr-blue-dark)",
+  WC: "var(--clr-green-dark)",
+  BB: "var(--clr-purple-dark)",
+  TC: "var(--clr-red-dark)",
+};
+
+function getColor(c: Chip): string {
+  return colorMap[c];
+}
+
+function ChipPill({ chip }: { chip: Chip }) {
+  if (chip.toLowerCase() === "none") return "";
+
+  return (
+    <span
+      style={{ backgroundColor: getColor(chip) }}
+      className="inline-flex rounded-full border border-[var(--clr-border)] px-3 py-1 text-xs font-semibold text-white]"
+    >
+      {chip}
+    </span>
   );
 }
