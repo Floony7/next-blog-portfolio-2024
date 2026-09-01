@@ -85,10 +85,10 @@ export const FplBootstrapEventSchema = z.object({
     finished: z.boolean(),
 });
 
-export const FplBootstrapResponseSchema = {
+export const FplBootstrapResponseSchema = z.object({
   elements: z.array(FplBootstrapElementSchema),
   events: z.array(FplBootstrapEventSchema),
-};
+});
 
 export const FplManagerPickSchema = z.object({
   element: z.number(),
@@ -100,17 +100,17 @@ export const FplManagerPickSchema = z.object({
 
 export const FplManagerPicksResponseSchema = z.object({
   active_chip: z.string().nullable(),
-  entry_history: {
+  entry_history: z.object({
     points: z.number(),
     total_points: z.number(),
     event_transfers: z.number(),
     event_transfers_cost: z.number(),
     points_on_bench: z.number(),
-  },
+  }),
   picks: z.array(FplManagerPickSchema),
 });
 
-export const FplManagerTransferSchema = {
+export const FplManagerTransferSchema = z.object({
   element_in: z.number(),
   element_in_cost: z.number(),
   element_out: z.number(),
@@ -118,15 +118,16 @@ export const FplManagerTransferSchema = {
   entry: z.number(),
   event: z.number(),
   time: z.string(),
-};
+});
 
 export const PlayerGameweekScoreSchema = z.object({
   id: z.number(),
   name: z.string(),
   points: z.number(),
+  position: z.enum(["GK", "DEF", "MID", "FWD"]).optional(),
 });
 
-export const MiniLeagueManagerGameweekRowSchema = {
+export const MiniLeagueManagerGameweekRowSchema = z.object({
   entryId: z.number(),
   teamName: z.string(),
   playerName: z.string(),
@@ -141,4 +142,4 @@ export const MiniLeagueManagerGameweekRowSchema = {
   gameweekPoints: z.number(),
   totalPoints: z.number(),
   benchPoints: z.number(),
-};
+});

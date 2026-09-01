@@ -16,47 +16,72 @@ import type {
   FplMiniLeagueStandingsResponse,
 } from "./types";
 
-export function getFplEntry(entryId: number) {
+type FplServiceOptions = {
+  revalidate?: number;
+  cache?: RequestCache;
+};
+
+export function getFplEntry(entryId: number, options: FplServiceOptions = {}) {
   return fetchFpl<FplEntryResponse>(getEntryEndpoint(entryId), {
-    revalidate: 60 * 60,
+    cache: options.cache,
+    revalidate: options.revalidate ?? 60 * 60,
   });
 }
 
-export function getBootstrapStatic() {
+export function getBootstrapStatic(options: FplServiceOptions = {}) {
   return fetchFpl<FplBootstrapResponse>(getBootstrapStaticEndpoint(), {
-    revalidate: 60 * 60 * 6,
+    cache: options.cache,
+    revalidate: options.revalidate ?? 60 * 60 * 6,
   });
 }
 
-export function getGameweekLiveData(gameweek: number) {
+export function getGameweekLiveData(
+  gameweek: number,
+  options: FplServiceOptions = {}
+) {
   return fetchFpl<FplGameweekLiveResponse>(
     getGameweekLiveEndpoint(gameweek),
     {
-      revalidate: 60 * 15,
+      cache: options.cache,
+      revalidate: options.revalidate ?? 60 * 15,
     }
   );
 }
 
-export function getMiniLeagueStandings(leagueId: number, page = 1) {
+export function getMiniLeagueStandings(
+  leagueId: number,
+  page = 1,
+  options: FplServiceOptions = {}
+) {
   return fetchFpl<FplMiniLeagueStandingsResponse>(
     getMiniLeagueStandingsEndpoint(leagueId, page),
     {
-      revalidate: 60 * 30,
+      cache: options.cache,
+      revalidate: options.revalidate ?? 60 * 30,
     }
   );
 }
 
-export function getManagerGameweekPicks(entryId: number, gameweek: number) {
+export function getManagerGameweekPicks(
+  entryId: number,
+  gameweek: number,
+  options: FplServiceOptions = {}
+) {
   return fetchFpl<FplManagerPicksResponse>(
     getManagerGameweekPicksEndpoint(entryId, gameweek),
     {
-      revalidate: 60 * 30,
+      cache: options.cache,
+      revalidate: options.revalidate ?? 60 * 30,
     }
   );
 }
 
-export function getManagerTransfers(entryId: number) {
+export function getManagerTransfers(
+  entryId: number,
+  options: FplServiceOptions = {}
+) {
   return fetchFpl<FplManagerTransfer[]>(getManagerTransfersEndpoint(entryId), {
-    revalidate: 60 * 30,
+    cache: options.cache,
+    revalidate: options.revalidate ?? 60 * 30,
   });
 }

@@ -2,17 +2,18 @@ import { createFplApiUrl } from "./endpoints";
 
 type FetchFplOptions = {
   revalidate?: number;
+  cache?: RequestCache;
 };
 
 export async function fetchFpl<TResponse>(
   path: string,
   options: FetchFplOptions = {}
 ): Promise<TResponse | null> {
-  const { revalidate = 60 * 30 } = options;
+  const { cache, revalidate = 60 * 30 } = options;
 
   try {
     const res = await fetch(createFplApiUrl(path), {
-      next: { revalidate },
+      ...(cache ? { cache } : { next: { revalidate } }),
     });
 
     if (!res.ok) {
