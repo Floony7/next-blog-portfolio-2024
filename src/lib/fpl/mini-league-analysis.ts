@@ -41,6 +41,7 @@ type BuildGameweekSummaryParams = {
   managerData: {
     standing: FplMiniLeagueStanding;
     picks: FplManagerPicksResponse;
+    previousPicks: FplManagerPicksResponse | null;
     transfers: FplManagerTransfer[];
   }[];
   gameweek: number;
@@ -126,10 +127,16 @@ export async function getMiniLeagueGameweekAnalysis(
 
   const managerData = await Promise.all(
     leagueStandings.map(async (standing) => {
-      const [picks, transfers] = await Promise.all([
+      const previousGameweek = activeGameweek - 1;
+      const [picks, previousPicks, transfers] = await Promise.all([
         getManagerGameweekPicks(standing.entry, activeGameweek, {
           revalidate: gameweekDataRevalidate,
         }),
+        previousGameweek > 0
+          ? getManagerGameweekPicks(standing.entry, previousGameweek, {
+              revalidate: DAY_IN_SECONDS,
+            })
+          : Promise.resolve(null),
         getManagerTransfers(standing.entry, { revalidate: DAY_IN_SECONDS }),
       ]);
 
@@ -140,6 +147,7 @@ export async function getMiniLeagueGameweekAnalysis(
       return {
         standing,
         picks,
+        previousPicks,
         transfers,
       };
     })
@@ -195,15 +203,15 @@ export function buildMiniLeagueGameweekSummary({
 }: BuildGameweekSummaryParams): MiniLeagueManagerGameweekRow[] {
   const lookup = createPlayerLookup(bootstrap, gameweekLive);
 
-  return managerData.map(({ standing, picks, transfers }) => {
+  return managerData.map(({ standing, picks, previousPicks, transfers }) => {
     const gameweekTransfers = transfers.filter(
       (transfer) => transfer.event === gameweek
     );
-    const transferredIn = gameweekTransfers.map((transfer) =>
-      createPlayerGameweekScore(transfer.element_in, lookup)
-    );
-    const transferredOut = gameweekTransfers.map((transfer) =>
-      createPlayerGameweekScore(transfer.element_out, lookup)
+    const { transferredIn, transferredOut } = getGameweekTransferScores(
+      picks,
+      previousPicks,
+      gameweekTransfers,
+      lookup
     );
     const transferCost = picks.entry_history.event_transfers_cost;
     const transferPointsDelta =
@@ -239,6 +247,50 @@ export function buildMiniLeagueGameweekSummary({
       benchPoints: picks.entry_history.points_on_bench,
     };
   });
+}
+
+function getGameweekTransferScores(
+  picks: FplManagerPicksResponse,
+  previousPicks: FplManagerPicksResponse | null,
+  gameweekTransfers: FplManagerTransfer[],
+  lookup: PlayerLookup
+) {
+  if (usesFinalSquadTransferDiff(picks.active_chip) && previousPicks) {
+    return getSquadDiffTransferScores(previousPicks, picks, lookup);
+  }
+
+  return {
+    transferredIn: gameweekTransfers.map((transfer) =>
+      createPlayerGameweekScore(transfer.element_in, lookup)
+    ),
+    transferredOut: gameweekTransfers.map((transfer) =>
+      createPlayerGameweekScore(transfer.element_out, lookup)
+    ),
+  };
+}
+
+function usesFinalSquadTransferDiff(activeChip: string | null) {
+  return activeChip === "wildcard" || activeChip === "freehit";
+}
+
+function getSquadDiffTransferScores(
+  previousPicks: FplManagerPicksResponse,
+  currentPicks: FplManagerPicksResponse,
+  lookup: PlayerLookup
+) {
+  const previousSquad = new Set(
+    previousPicks.picks.map((pick) => pick.element)
+  );
+  const currentSquad = new Set(currentPicks.picks.map((pick) => pick.element));
+
+  return {
+    transferredIn: [...currentSquad]
+      .filter((playerId) => !previousSquad.has(playerId))
+      .map((playerId) => createPlayerGameweekScore(playerId, lookup)),
+    transferredOut: [...previousSquad]
+      .filter((playerId) => !currentSquad.has(playerId))
+      .map((playerId) => createPlayerGameweekScore(playerId, lookup)),
+  };
 }
 
 function createPlayerLookup(
