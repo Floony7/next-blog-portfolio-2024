@@ -1,4 +1,8 @@
 import Link from "next/link";
+import type { Element } from "hast";
+import { MarkdownAsync } from "react-markdown";
+import { rehypePrettyCode } from "rehype-pretty-code";
+import remarkGfm from "remark-gfm";
 import getFormattedDate from "@/lib/format-date";
 import { getSortedPostsData, getPostData } from "@/lib/posts";
 import { notFound } from "next/navigation";
@@ -44,7 +48,7 @@ export default async function Post({
     notFound();
   }
 
-  const { title, date, contentHtml, tags } = await getPostData(postId);
+  const { title, date, content, tags } = await getPostData(postId);
 
   const published = getFormattedDate(date);
 
@@ -68,7 +72,24 @@ export default async function Post({
         </div>
       </header>
       <article className="prose prose-xl prose-strong:text-[var(--clr-text)] mt-10 max-w-none text-[var(--clr-muted)]">
-        <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <MarkdownAsync
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[
+            [
+              rehypePrettyCode,
+              {
+                theme: "one-dark-pro",
+                onVisitLine(node: Element) {
+                  if (node.children.length === 0) {
+                    node.children = [{ type: "text", value: " " }];
+                  }
+                },
+              },
+            ],
+          ]}
+        >
+          {content}
+        </MarkdownAsync>
         <ReturnLink href="/blog" text="Back to blog" />
       </article>
     </section>
